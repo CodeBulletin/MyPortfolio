@@ -1,0 +1,27 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {    
+    "watch": "npx tailwindcss -i ./src/tailwind/index.css -o ./lib/css/index.css --watch",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeBulletin/MyPortfolio.git"
+  },
+  "keywords": [],
+  "author": "Code Bulletin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeBulletin/MyPortfolio/issues"
+  },
+  "homepage": "https://github.com/CodeBulletin/MyPortfolio#readme",
+  "devDependencies": {
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "sass": "^1.54.0",
+    "tailwind": "^4.0.0",
+    "typescript": "^4.7.4"
+  }
+}
