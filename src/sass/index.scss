@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import 'variables';
+@import 'base';
+@import 'breakpoints';
+@import 'components/navbar';
+@import 'components/switch';
+
+.sticky {
+    // overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.empty-button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}

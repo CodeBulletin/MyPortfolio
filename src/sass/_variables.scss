@@ -1,0 +1,21 @@
+$breakpoints: (
+	"xs": 0,
+	"sm": 480px,
+	"md": 720px,
+	"lg": 1050px,
+	"xl": 1200px,
+    "2xl": 1400px,
+    "3xl": 1600px,
+);
+
+// light mode
+$nav-link-col: #4845ff;
+$nav-title-col: #af00b5;
+$nav-title-icon: #fc6214;
+
+
+// dark mode
+$nav-bg-dark: #040f26;
+$nav-link-dark: #ff4a3d;
+$nav-title-dark: #148cfc;
+$nav-title-icon-dark: #ffc53d;
