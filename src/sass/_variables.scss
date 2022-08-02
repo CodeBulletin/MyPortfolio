@@ -8,14 +8,55 @@ $breakpoints: (
     "3xl": 1600px,
 );
 
+//colors
+
+$very-dark-blue: #0D1321;
+$dark-blue-2: #181D27;
+$dark-blue: #0A2463;
+$blue: #5658dd; 
+$light-blue: #7578ff;
+
+$pink: #FF5964;
+
+$purpleish: #89023E;
+
+$red: #c8302c;
+$light-red: #e13b25;
+
+$green: #05c59b;
+$light-green: #16d6aa;
+$very-light-green: #A9FFCB;
+
+$orange: #fe7000;
+$light-orange: #ff880a;
+
+$gray-blue: #6288c3;
+$light-gray-blue: #7092c9;
+
+$yellow: #FFEE32;
+
 // light mode
-$nav-link-col: #4845ff;
-$nav-title-col: #af00b5;
-$nav-title-icon: #fc6214;
+$nav-link-col: $blue;
+$nav-title-col: $purpleish;
+$nav-title-icon: $orange;
+
+$home-heading-1: $dark-blue;
+$home-heading-span-1: $orange;
+$home-heading-2: #000;
+$home-heading-span-2: $purpleish;
+
+$home-link-main: $light-orange, $dark-blue;
+$social-links: $yellow;
 
 
 // dark mode
-$nav-bg-dark: #040f26;
-$nav-link-dark: #ff4a3d;
-$nav-title-dark: #148cfc;
-$nav-title-icon-dark: #ffc53d;
+$nav-bg-dark: $very-dark-blue;
+$nav-link-dark: $pink;
+$nav-title-dark: $light-green;
+$nav-title-icon-dark: $light-orange;
+$home-heading-1-dark: $light-gray-blue;
+$home-heading-span-1-dark: $light-orange;
+$home-heading-2-dark: #f7f7f7;
+$home-heading-span-2-dark: $light-green;
+$home-link-main-dark: $yellow, $very-light-green;
+$social-links-dark: $light-blue;

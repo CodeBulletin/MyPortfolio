@@ -1,0 +1,280 @@
+@use "sass:list";
+
+.home-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    iframe {
+        display: flex;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .home {
+        width: 100%;
+        z-index: 1;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+        .home-text {
+            margin: auto 0;
+            display: flex;
+            flex-direction: column;
+
+            text-align: center;
+
+            margin: 2rem;
+
+            .home-heading {
+                font-size: 2rem;
+                font-weight: 800;
+                color: $home-heading-1;
+                margin: 0;
+
+                span {
+                    color: $home-heading-span-1;
+                }
+            }
+
+            .home-heading-2 {
+                font-size: 1.25rem;
+                font-weight: 600;
+
+                color: $home-heading-2;
+                
+                span {
+                    color: $home-heading-span-2;
+                }
+            }
+
+            .link-div {
+                margin: auto;
+                display: flex;
+                margin-bottom: 1.66rem;
+                .link-button {
+                    display: flex;
+                    align-items: center;
+
+                    padding: 12px 20px;
+
+                    font-size: 1.1;
+
+                    background-color: list.nth($home-link-main, 1);
+                    border-radius: 30px;
+                    gap: 5px;
+
+                    transition: background-color 0.25s, gap 0.25s, padding 0.25s;
+
+                    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+
+
+                    &:hover {
+                        background-color: list.nth($home-link-main, 2);
+                        gap: 12px;
+                        padding-right: 24px;
+                    }
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+            .home-links {
+                display: flex;
+                gap: 10px;
+                margin: auto;
+                .link-button {
+                    padding: 10px;
+                    padding-bottom: 5px;
+                    border-radius: 50%;
+
+                    transition: background-color 0.25s;
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                        fill: $social-links;
+                        transition: fill 0.25s;
+                    }
+                }
+            }
+        }
+
+        .home-gif {
+            display: flex;
+            align-items: center;
+
+            margin: 1.5rem;
+
+            .link-button {
+                display: flex;
+                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+                padding: 0;
+                border-radius: 50%;
+                background-color: #00000000;
+                img {
+                    border-radius: 50%;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}
+
+.dark {
+    .home-heading {
+        color: $home-heading-1-dark !important;
+        span {
+            color: $home-heading-span-1-dark !important;
+        }
+    }
+
+    .home-heading-2 {
+        color: $home-heading-2-dark !important;
+        span {
+            color: $home-heading-span-2-dark !important;
+        }
+    }
+    .link-div {
+        .link-button {
+            background-color: list.nth($home-link-main-dark, 1) !important;
+            color: black;
+            svg {
+                fill: black;
+            }
+            &:hover {
+                background-color: list.nth($home-link-main-dark, 2) !important;
+            }
+        }
+    }
+    .home-container {
+        .home {
+            .home-text {
+                .home-links {
+                    .link-button {
+                        background-color: whitesmoke;
+                        svg {
+                            fill: $social-links-dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(550px) {
+    .home-container {
+        .home {
+            .home-text {
+                .home-heading {
+                    font-size: 3rem;
+                }
+                .home-heading-2 {
+                    font-size: 1.6rem;
+                }
+                .link-div {
+                    .link-button {
+                        padding: 20px 30px;
+                    }
+                }
+            }
+            .home-gif {
+                margin: 2rem;
+                .link-button {
+                    img {
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(994px) {
+    .home-container {
+        .home {
+            .home-text {
+                text-align: left;
+                .link-div {
+                    margin: 0;
+                    margin-bottom: 1.66rem;
+                }
+                .home-links {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.linkedin {
+    &:hover {
+        background-color: #0a66c2 !important;
+        svg {
+            fill: white !important;
+        }
+    }
+}
+
+.github {
+    &:hover {
+        svg {
+            fill: white !important;
+        }
+    }
+}
+
+.dark {
+    .github {
+        &:hover {
+            svg {
+                fill: black !important;
+            }
+        }
+    }
+}
+
+.youtube {
+    &:hover {
+        background-color: red !important;
+        svg {
+            fill: white !important;
+        }
+    }
+}
+
+.twitter {
+    &:hover {
+        background-color: #1da1f2 !important;
+        svg {
+            fill: white !important;
+        }
+    }
+}
+
+.discord {
+    &:hover {
+        background-color: #5865f2 !important;
+        svg {
+            fill: white !important;
+        }
+    }
+}
+
+.insta {
+    &:hover {
+        background-color: #f7017f !important;
+        svg {
+            fill: white !important;
+        }
+    }
+}

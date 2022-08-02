@@ -5,6 +5,14 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .navbar-container {
   width: 100%;
   display: flex;
@@ -51,10 +59,10 @@ html, body {
   margin: 15px 0;
 }
 .navbar-container .navbar .nav-mobile .nav-title a:hover {
-  color: #af00b5;
+  color: #89023E;
 }
 .navbar-container .navbar .nav-mobile .nav-title a:hover .icon {
-  fill: #fc6214;
+  fill: #fe7000;
   transition-delay: 0.25s;
 }
 .navbar-container .navbar .nav-mobile .nav-menus {
@@ -99,19 +107,19 @@ html, body {
   color: black;
 }
 .navbar-container .navbar .nav-items .nav-links .nav-link:hover, .navbar-container .navbar .nav-items .nav-links .nav-link:focus {
-  color: #4845ff;
+  color: #5658dd;
 }
 .navbar-container .navbar .nav-items .nav-links .nav-link:hover:after, .navbar-container .navbar .nav-items .nav-links .nav-link:focus:after {
   bottom: -0.6rem;
-  background-color: #4845ff;
+  background-color: #5658dd;
   height: 3px;
 }
 .navbar-container .navbar .nav-items .nav-links .nav-link-active {
-  color: #4845ff !important;
+  color: #5658dd !important;
 }
 .navbar-container .navbar .nav-items .nav-links .nav-link-active:after {
   bottom: -0.6rem;
-  background-color: #4845ff;
+  background-color: #5658dd;
   height: 3px;
 }
 .navbar-container .navbar .nav-items .nav-links:first-child {
@@ -130,11 +138,11 @@ html, body {
 }
 .navbar-container .navbar .nav-items .nav-settings .icon:hover {
   transform: rotate(90deg);
-  fill: #4845ff;
+  fill: #5658dd;
 }
 .navbar-container .navbar .nav-items .nav-settings .active-icon {
   transform: rotate(90deg);
-  fill: #4845ff;
+  fill: #5658dd;
   transition: transform 0.25s, fill 0.25s;
 }
 .navbar-container .navbar .nav-items .nav-settings .menu {
@@ -164,7 +172,7 @@ html, body {
 
 /* purgecss start ignore */
 .dark .navbar-container {
-  background-color: #040f26;
+  background-color: #0D1321;
 }
 .dark .navbar-container .nav-mobile .nav-title a {
   color: white;
@@ -173,37 +181,37 @@ html, body {
   fill: white;
 }
 .dark .navbar-container .nav-mobile .nav-title a:hover {
-  color: #148cfc;
+  color: #16d6aa;
 }
 .dark .navbar-container .nav-mobile .nav-title a:hover .icon {
-  fill: #ffc53d;
+  fill: #ff880a;
 }
 .dark .navbar-container .nav-items .nav-links .nav-link:link, .dark .navbar-container .nav-items .nav-links .nav-link:visited {
   color: white;
 }
 .dark .navbar-container .nav-items .nav-links .nav-link:hover, .dark .navbar-container .nav-items .nav-links .nav-link:focus {
-  color: #ff4a3d;
+  color: #FF5964;
 }
 .dark .navbar-container .nav-items .nav-links .nav-link:hover:after, .dark .navbar-container .nav-items .nav-links .nav-link:focus:after {
-  background-color: #ff4a3d;
+  background-color: #FF5964;
 }
 .dark .navbar-container .nav-items .nav-links .nav-link-active {
-  color: #ff4a3d !important;
+  color: #FF5964 !important;
 }
 .dark .navbar-container .nav-items .nav-links .nav-link-active:after {
-  background-color: #ff4a3d;
+  background-color: #FF5964;
 }
 .dark .navbar-container .nav-items .nav-settings .icon {
   fill: white;
 }
 .dark .navbar-container .nav-items .nav-settings .icon:hover {
-  fill: #ff4a3d;
+  fill: #FF5964;
 }
 .dark .navbar-container .nav-items .nav-settings .active-icon {
-  fill: #ff4a3d;
+  fill: #FF5964;
 }
 .dark .navbar-container .nav-items .nav-settings .menu {
-  background-color: #040f26;
+  background-color: #0D1321;
 }
 .dark .navbar-container .nav-items .nav-settings .menu div span {
   color: white;
@@ -364,6 +372,220 @@ html, body {
   --x: 28px;
   --s: 12px;
   --b: var(--dot);
+}
+
+.link-button {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.home-container iframe {
+  display: flex;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.home-container .home {
+  width: 100%;
+  z-index: 1;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.home-container .home .home-text {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem;
+}
+.home-container .home .home-text .home-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0A2463;
+  margin: 0;
+}
+.home-container .home .home-text .home-heading span {
+  color: #fe7000;
+}
+.home-container .home .home-text .home-heading-2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000;
+}
+.home-container .home .home-text .home-heading-2 span {
+  color: #89023E;
+}
+.home-container .home .home-text .link-div {
+  margin: auto;
+  display: flex;
+  margin-bottom: 1.66rem;
+}
+.home-container .home .home-text .link-div .link-button {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-size: 1.1;
+  background-color: #ff880a;
+  border-radius: 30px;
+  gap: 5px;
+  transition: background-color 0.25s, gap 0.25s, padding 0.25s;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+}
+.home-container .home .home-text .link-div .link-button:hover {
+  background-color: #0A2463;
+  gap: 12px;
+  padding-right: 24px;
+}
+.home-container .home .home-text .link-div .link-button span {
+  font-weight: 600;
+}
+.home-container .home .home-text .home-links {
+  display: flex;
+  gap: 10px;
+  margin: auto;
+}
+.home-container .home .home-text .home-links .link-button {
+  padding: 10px;
+  padding-bottom: 5px;
+  border-radius: 50%;
+  transition: background-color 0.25s;
+}
+.home-container .home .home-text .home-links .link-button svg {
+  width: 24px;
+  height: 24px;
+  fill: #FFEE32;
+  transition: fill 0.25s;
+}
+.home-container .home .home-gif {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem;
+}
+.home-container .home .home-gif .link-button {
+  display: flex;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+}
+.home-container .home .home-gif .link-button img {
+  border-radius: 50%;
+  max-width: 300px;
+}
+
+.dark .home-heading {
+  color: #7092c9 !important;
+}
+.dark .home-heading span {
+  color: #ff880a !important;
+}
+.dark .home-heading-2 {
+  color: #f7f7f7 !important;
+}
+.dark .home-heading-2 span {
+  color: #16d6aa !important;
+}
+.dark .link-div .link-button {
+  background-color: #FFEE32 !important;
+  color: black;
+}
+.dark .link-div .link-button svg {
+  fill: black;
+}
+.dark .link-div .link-button:hover {
+  background-color: #A9FFCB !important;
+}
+.dark .home-container .home .home-text .home-links .link-button {
+  background-color: whitesmoke;
+}
+.dark .home-container .home .home-text .home-links .link-button svg {
+  fill: #7578ff;
+}
+
+@media (min-width: 550px) {
+  .home-container .home .home-text .home-heading {
+    font-size: 3rem;
+  }
+  .home-container .home .home-text .home-heading-2 {
+    font-size: 1.6rem;
+  }
+  .home-container .home .home-text .link-div .link-button {
+    padding: 20px 30px;
+  }
+  .home-container .home .home-gif {
+    margin: 2rem;
+  }
+  .home-container .home .home-gif .link-button img {
+    max-width: 400px;
+  }
+}
+@media (min-width: 994px) {
+  .home-container .home .home-text {
+    text-align: left;
+  }
+  .home-container .home .home-text .link-div {
+    margin: 0;
+    margin-bottom: 1.66rem;
+  }
+  .home-container .home .home-text .home-links {
+    margin: 0;
+  }
+}
+.linkedin:hover {
+  background-color: #0a66c2 !important;
+}
+.linkedin:hover svg {
+  fill: white !important;
+}
+
+.github:hover svg {
+  fill: white !important;
+}
+
+.dark .github:hover svg {
+  fill: black !important;
+}
+
+.youtube:hover {
+  background-color: red !important;
+}
+.youtube:hover svg {
+  fill: white !important;
+}
+
+.twitter:hover {
+  background-color: #1da1f2 !important;
+}
+.twitter:hover svg {
+  fill: white !important;
+}
+
+.discord:hover {
+  background-color: #5865f2 !important;
+}
+.discord:hover svg {
+  fill: white !important;
+}
+
+.insta:hover {
+  background-color: #f7017f !important;
+}
+.insta:hover svg {
+  fill: white !important;
 }
 
 .sticky {
