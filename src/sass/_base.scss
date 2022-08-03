@@ -2,6 +2,7 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -10,4 +11,9 @@ body {
     &::-webkit-scrollbar {
         display: none;
     }
+}
+
+.dark {
+    background-color: #101015;
+    color: white;
 }

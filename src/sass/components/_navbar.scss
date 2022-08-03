@@ -157,7 +157,6 @@
                     }
                 }
                 .open {
-                    /* purgecss ignore current */
                     opacity: 1;
                     transform: translateY(50px);
                     pointer-events: all;
@@ -172,7 +171,6 @@
     }
 }
 
-/* purgecss start ignore */
 .dark {
     .navbar-container {
         background-color: $nav-bg-dark;
@@ -182,9 +180,6 @@
                     color: white;
                     .icon {
                         fill: white;
-                    }
-                    h1 {
-                        // color:white;
                     }
                     &:hover {
                         color: $nav-title-dark;
@@ -237,7 +232,6 @@
         }
     }
 }
-/* purgecss end ignore */
 
 @include breakpoint(590px) {
     .navbar-container {

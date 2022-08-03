@@ -6,9 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="./lib/css/index.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js" integrity="sha512-u1L7Dp3BKUP3gijgSRoMTNxmDl/5o+XOHupwwa7jsI1rMzHrllSLKsGOfqjYl8vrEG+8ghnRPNA/SCltmJCZpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./lib/js/snap.svg-min.js"></script>
+
         <title>Document</title>
     </head>
-    <body id="body" onload="on_load()" class="">
+    <body id="body" onload="on_load()" class="dark">
         <!-- Navbar -->
         <section id="Navbar" class="navbar-container sticky">
             <nav class="navbar">
@@ -16,8 +21,8 @@
                     <div class="nav-title">
                         <a href="#home">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-radioactive icon" viewBox="0 0 16 16">
-                                <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z"/>
-                                <path d="M9.653 5.496A2.986 2.986 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.972 5.972 0 0 1 8 2c1.222 0 2.358.365 3.306.992L9.653 5.496Zm1.342 2.324a2.986 2.986 0 0 1-.884 2.312 3.01 3.01 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a5.986 5.986 0 0 0 1.767-4.624l-2.994.18Zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
+                                <path id="outernav" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z"/>
+                                <path id="innernav" d="M9.653 5.496A2.986 2.986 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.972 5.972 0 0 1 8 2c1.222 0 2.358.365 3.306.992L9.653 5.496Zm1.342 2.324a2.986 2.986 0 0 1-.884 2.312 3.01 3.01 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a5.986 5.986 0 0 0 1.767-4.624l-2.994.18Zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
                             </svg>
                             <h1>Code Bulletin</h1>
                         </a>
@@ -67,7 +72,7 @@
 
         <!-- Home -->
         <section id="home" class="home-container">
-            <iframe id="particles" src="./lib/p5/sketch.html?bg=F7F7F7FF&particles=50&col=0000007b" frameborder="0" height="0px"></iframe>
+            <iframe id="particles" src="./lib/p5/sketch.html?bg=101015FF&particles=50&col=A0A0FF7b" frameborder="0" height="0px"></iframe>
             <div class="home">
                 <div class="home-text">
                     <div>
@@ -76,7 +81,7 @@
                             I'm Bhavesh <span>Malhotra<span></h1>
                     </div>
                     <div>
-                        <h2 class="home-heading-2">I Am Into <span id="specialization"><span>|</span></span></h2>
+                        <h2 class="home-heading-2">I Am Into <span id="specialization"></span></h2>
                     </div>
                     <div class="link-div">
                         <a href="#about" class="link-button">
@@ -122,14 +127,72 @@
 
                 <div class="home-gif">
                     <a href="https://codebulletin.github.io/MyPortfolio/" class="link-button" data-tilt> 
-                        <img id="home_gif" src="./data/gifs/coding.gif" alt="">
+                        <img id="home_gif" src="./data/gifs/dev_animado.gif" alt="">
                     </a>
                 </div>
             </div>
         </section>
+
+        <!-- About Me -->
+        <section id="about" class="about">
+            <div class="head">
+                <h1>About Me(WIP)</h1>
+            </div>
+            <div class="details">
+                <div class="pfpdiv">
+                    <div class="bg">
+                        <svg id="blob" viewBox="0 0 900 900">
+                            <g transform="translate(429.4364486545468 490.8404783186162)">
+                                <path id="blob1" d="M327.8 -329.7C390.5 -265.2 383.2 -132.6 370.9 -12.3C358.6 108 341.2 215.9 278.6 262.8C215.9 309.7 108 295.5 -2.1 297.6C-112.2 299.7 -224.4 318.1 -281.7 271.3C-339.1 224.4 -341.5 112.2 -336.2 5.3C-330.9 -101.6 -317.8 -203.2 -260.5 -267.7C-203.2 -332.2 -101.6 -359.6 15.5 -375.1C132.6 -390.6 265.2 -394.2 327.8 -329.7"></path>
+                            </g>
+                            <g transform="translate(385.04677938934947 442.97732865757723)">
+                                <path id="blob2" d="M301 -259C389.8 -212.1 461.4 -106.1 471.5 10.1C481.7 126.3 430.3 252.7 341.5 306.8C252.7 361 126.3 343 -1.1 344.1C-128.5 345.1 -256.9 365.2 -306.9 311.1C-356.9 256.9 -328.5 128.5 -330.5 -2.1C-332.6 -132.6 -365.2 -265.2 -315.2 -312C-265.2 -358.9 -132.6 -320.1 -13.3 -306.8C106.1 -293.6 212.1 -305.9 301 -259"></path>
+                            </g>
+                            <g transform="translate(492.11863590001485 433.1342928943908)">
+                                <path id="blob3" d="M306.9 -320.8C381.9 -231.9 416 -116 424.3 8.3C432.6 132.6 415.2 265.2 340.2 324.3C265.2 383.5 132.6 369.2 22 347.3C-88.6 325.3 -177.2 295.6 -255.2 236.4C-333.2 177.2 -400.6 88.6 -389.5 11.2C-378.3 -66.3 -288.6 -132.6 -210.6 -221.4C-132.6 -310.3 -66.3 -421.6 24.8 -446.5C116 -471.3 231.9 -409.6 306.9 -320.8"></path>
+                            </g>
+                            <g transform="translate(460.15474278435033 524.050032508344)">
+                                <path id="blob4" d="M270 -280.5C347.1 -192.8 405.1 -96.4 423.2 18.1C441.2 132.6 419.5 265.2 342.3 312C265.2 358.9 132.6 320.1 19.4 300.7C-93.8 281.3 -187.6 281.4 -265.1 234.5C-342.6 187.6 -403.8 93.8 -391.4 12.4C-379.1 -69.1 -293.1 -138.1 -215.6 -225.8C-138.1 -313.5 -69.1 -419.7 13.7 -433.4C96.4 -447.1 192.8 -368.1 270 -280.5"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="pfp">
+                        <img src="./data/svg/avataaars.svg" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h1>I'm Bhavesh Malhotra</h1>
+                        <h2>Passionate Full-Stack Web Developer | Machine Learning Enthusiast</h2>
+                    </div>
+                    <div>
+                        <p>
+                            I am a third year BSc student in Delhi University.<br>
+                            Skills: Full Stack Web Development, Machine Learning, Deep Learning, Graphics APIs like opengl, vulkan<br>
+                            Programing Languages: C, C++, C#, Python, Java, Javascript, Typescript, HTML, CSS, SASS, RUST, R, Mathematica<br>
+                            I have a youtube channel named Code Bulletin
+                        </p>
+                    </div>
+                    <div>
+                        <div>
+                            <span>Age:</span> 21
+                        </div>
+                        <div>
+                            <span>Email:</span> codebulletin@gmail.com
+                        </div>
+                        <div>
+                            <span>College:</span> Deshbandhu College
+                        </div>
+                        <div>
+                            <span>Place:</span> New Delhi, India
+                        </div>
+                    </div>
+                    <div>
+                        <a href="">Github</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js" integrity="sha512-u1L7Dp3BKUP3gijgSRoMTNxmDl/5o+XOHupwwa7jsI1rMzHrllSLKsGOfqjYl8vrEG+8ghnRPNA/SCltmJCZpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./lib/js/text.js"></script>
     <script src="./lib/js/index.js"></script>
 </html>

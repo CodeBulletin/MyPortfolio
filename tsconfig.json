@@ -1,6 +1,0 @@
-{
-    "files": ["src/ts/*.ts"],
-    "compilerOptions": {
-        "target": "ES6"
-    }
-}

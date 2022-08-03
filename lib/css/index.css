@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -11,6 +12,11 @@ body {
 }
 body::-webkit-scrollbar {
   display: none;
+}
+
+.dark {
+  background-color: #101015;
+  color: white;
 }
 
 .navbar-container {
@@ -160,7 +166,6 @@ body::-webkit-scrollbar {
   margin-left: 10px;
 }
 .navbar-container .navbar .nav-items .nav-settings .open {
-  /* purgecss ignore current */
   opacity: 1;
   transform: translateY(50px);
   pointer-events: all;
@@ -170,7 +175,6 @@ body::-webkit-scrollbar {
   display: flex;
 }
 
-/* purgecss start ignore */
 .dark .navbar-container {
   background-color: #0D1321;
 }
@@ -217,7 +221,6 @@ body::-webkit-scrollbar {
   color: white;
 }
 
-/* purgecss end ignore */
 @media (min-width: 590px) {
   .navbar-container .navbar .nav-items .nav-settings .menu {
     right: 2%;
@@ -586,6 +589,40 @@ body::-webkit-scrollbar {
 }
 .insta:hover svg {
   fill: white !important;
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.about .head {
+  margin: 2rem auto;
+}
+.about .head h1 {
+  font-size: 2rem;
+}
+.about .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.about .details .pfpdiv {
+  position: relative;
+}
+.about .details .pfpdiv .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#blob1 {
+  fill: blue;
+}
+
+#blob2, #blob3, #blob4 {
+  visibility: hidden;
 }
 
 .sticky {

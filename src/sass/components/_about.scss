@@ -1,0 +1,38 @@
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .head {
+        margin: 2rem auto;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .pfpdiv {
+            position: relative;
+            .bg {
+                position: absolute;
+                // top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+#blob1 {
+    fill: blue;
+}
+
+#blob2, #blob3, #blob4 {
+    visibility: hidden;
+}
