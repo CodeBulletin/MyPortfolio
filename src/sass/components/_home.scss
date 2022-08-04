@@ -93,7 +93,8 @@
                 margin: auto;
                 .link-button {
                     padding: 10px;
-                    padding-bottom: 5px;
+                    padding-bottom: 4px;
+                    padding-top: 8px;
                     border-radius: 50%;
 
                     transition: background-color 0.25s;
@@ -182,7 +183,7 @@
                 }
                 .link-div {
                     .link-button {
-                        padding: 20px 30px;
+                        padding: 18px 30px;
                     }
                 }
             }

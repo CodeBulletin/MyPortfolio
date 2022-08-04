@@ -2,37 +2,263 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: $about-bg;
+
+    transition: background-color 0.25s, color 0.25s;
 
     .head {
-        margin: 2rem auto;
+        margin: 1.5rem auto;
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
+            span {
+                margin-top: 0;
+                margin-bottom: 0;
+                color: $about-heading;
+            }
         }
     }
 
     .details {
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
 
         .pfpdiv {
-            position: relative;
-            .bg {
-                position: absolute;
-                // top: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
+            display: flex;
+            margin: 0 4rem;
+            margin-bottom: 2rem;
+
+            .about-link-div {
+                display: none;
+            }
+
+            div {
+                position: relative;
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+                .pfp {
+                    img {
+                        width: 250px;
+                        z-index: 1;
+                    }
+                }
+                .bg {
+                    position: absolute;
+                    width: 100%;
+                    z-index: 0;
+                }
+            }
+        }
+
+        .about-me {
+            padding: 0 2rem;
+            text-align: center;
+            .headings {
+                h1 {
+                    font-size: 2.5rem;
+                    margin-bottom: 0.5rem;
+                    margin-top: 0.0rem;
+                }
+
+                h2 {
+                    font-size: 1.4rem;
+                    margin-top: 0rem;
+                }
+            }
+            .paragraph {
+                p {
+                    font-size: 1.1rem;
+                    span {
+                        color: $about-data;
+                    }
+                }
+            }
+            .data {
+                display: grid;
+                row-gap: 0.5rem;
+                font-size: 0.8rem;
+
+                div {
+                    span {
+                        color: $about-data;
+                    }
+                }
+
+                margin-bottom: 2rem;
+            }
+            .about-link-div {
+                margin-bottom: 2rem;
             }
         }
     }
 }
 
+.about-link-div {
+    margin: 1rem auto;
+    .link-button {
+        border-radius: 1rem;
+        background-color: $about-link;
+        &:hover {
+            background-color: $about-link-hover;
+        }
+    }
+}
+
+.div1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.div2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.div3 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.div4 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
 #blob1 {
-    fill: blue;
+    fill: $about-blob;
+    transform: fill 0.25s;
 }
 
 #blob2, #blob3, #blob4 {
     visibility: hidden;
+}
+
+.dark {
+    .about {
+        background-color: $about-bg-dark;
+        .head {
+            h1 {
+                span {
+                    color: $about-heading-dark;
+                }
+            }
+        }
+        .details {
+            .about-me {
+                .data {
+                    div {
+                        span {
+                            color: $about-data-dark;
+                        }
+                    }
+                }
+                .paragraph {
+                    p {
+                        span {
+                            color: $about-data-dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .about-link-div {
+        margin: 1rem auto;
+        .link-button {
+            border-radius: 1rem;
+            background-color: $about-link-dark;
+            &:hover {
+                background-color: $about-link-hover-dark;
+            }
+        }
+    }
+
+
+    #blob1 {
+        fill: $about-blob-dark;
+    }    
+}
+
+@include breakpoint(550px) {
+    .about {
+        .head {
+            margin: 2rem auto;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        .details {
+            .pfpdiv {
+                .pfp {
+                    img {
+                        width: 300px;
+                    }
+                }
+            }
+            .about-me {
+                .headings {
+                    h1 {
+                        font-size: 3rem;
+                    }
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+                }
+                .paragraph {
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(1000px) {
+    .about {
+        .head {
+            margin: 1rem auto;
+        }
+        .details {
+            flex-direction: row;
+            .pfpdiv {
+                margin: 0 4rem;
+                .about-link-div {
+                    display: block;
+                    margin-top: 2rem;
+                }
+            }
+            .about-me {
+                text-align: left;
+                .about-link-div {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .div1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .div2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .div3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .div4 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
 }

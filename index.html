@@ -7,13 +7,14 @@
 
         <link rel="stylesheet" href="./lib/css/index.css">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js" integrity="sha512-u1L7Dp3BKUP3gijgSRoMTNxmDl/5o+XOHupwwa7jsI1rMzHrllSLKsGOfqjYl8vrEG+8ghnRPNA/SCltmJCZpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./lib/js/jquery.min.js"></script>
         <script src="./lib/js/snap.svg-min.js"></script>
+        <script src="./lib/js/data.js"></script>
 
-        <title>Document</title>
+        <title>MyPortfolio</title>
     </head>
     <body id="body" onload="on_load()" class="dark">
+
         <!-- Navbar -->
         <section id="Navbar" class="navbar-container sticky">
             <nav class="navbar">
@@ -136,63 +137,65 @@
         <!-- About Me -->
         <section id="about" class="about">
             <div class="head">
-                <h1>About Me(WIP)</h1>
+                <h1>About <span>Me</span></h1>
             </div>
             <div class="details">
                 <div class="pfpdiv">
-                    <div class="bg">
-                        <svg id="blob" viewBox="0 0 900 900">
-                            <g transform="translate(429.4364486545468 490.8404783186162)">
-                                <path id="blob1" d="M327.8 -329.7C390.5 -265.2 383.2 -132.6 370.9 -12.3C358.6 108 341.2 215.9 278.6 262.8C215.9 309.7 108 295.5 -2.1 297.6C-112.2 299.7 -224.4 318.1 -281.7 271.3C-339.1 224.4 -341.5 112.2 -336.2 5.3C-330.9 -101.6 -317.8 -203.2 -260.5 -267.7C-203.2 -332.2 -101.6 -359.6 15.5 -375.1C132.6 -390.6 265.2 -394.2 327.8 -329.7"></path>
-                            </g>
-                            <g transform="translate(385.04677938934947 442.97732865757723)">
-                                <path id="blob2" d="M301 -259C389.8 -212.1 461.4 -106.1 471.5 10.1C481.7 126.3 430.3 252.7 341.5 306.8C252.7 361 126.3 343 -1.1 344.1C-128.5 345.1 -256.9 365.2 -306.9 311.1C-356.9 256.9 -328.5 128.5 -330.5 -2.1C-332.6 -132.6 -365.2 -265.2 -315.2 -312C-265.2 -358.9 -132.6 -320.1 -13.3 -306.8C106.1 -293.6 212.1 -305.9 301 -259"></path>
-                            </g>
-                            <g transform="translate(492.11863590001485 433.1342928943908)">
-                                <path id="blob3" d="M306.9 -320.8C381.9 -231.9 416 -116 424.3 8.3C432.6 132.6 415.2 265.2 340.2 324.3C265.2 383.5 132.6 369.2 22 347.3C-88.6 325.3 -177.2 295.6 -255.2 236.4C-333.2 177.2 -400.6 88.6 -389.5 11.2C-378.3 -66.3 -288.6 -132.6 -210.6 -221.4C-132.6 -310.3 -66.3 -421.6 24.8 -446.5C116 -471.3 231.9 -409.6 306.9 -320.8"></path>
-                            </g>
-                            <g transform="translate(460.15474278435033 524.050032508344)">
-                                <path id="blob4" d="M270 -280.5C347.1 -192.8 405.1 -96.4 423.2 18.1C441.2 132.6 419.5 265.2 342.3 312C265.2 358.9 132.6 320.1 19.4 300.7C-93.8 281.3 -187.6 281.4 -265.1 234.5C-342.6 187.6 -403.8 93.8 -391.4 12.4C-379.1 -69.1 -293.1 -138.1 -215.6 -225.8C-138.1 -313.5 -69.1 -419.7 13.7 -433.4C96.4 -447.1 192.8 -368.1 270 -280.5"></path>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="pfp">
-                        <img src="./data/svg/avataaars.svg" alt="">
+                    <div>
+                        <div class="pfp">
+                            <img src="./data/svg/avataaars.svg" alt="">
+                        </div>
+                        <div class="bg">
+                            <svg id="blob" viewBox="0 0 900 900">
+                                <g transform="translate(429.4364486545468 490.8404783186162)">
+                                    <path id="blob1" d="M327.8 -329.7C390.5 -265.2 383.2 -132.6 370.9 -12.3C358.6 108 341.2 215.9 278.6 262.8C215.9 309.7 108 295.5 -2.1 297.6C-112.2 299.7 -224.4 318.1 -281.7 271.3C-339.1 224.4 -341.5 112.2 -336.2 5.3C-330.9 -101.6 -317.8 -203.2 -260.5 -267.7C-203.2 -332.2 -101.6 -359.6 15.5 -375.1C132.6 -390.6 265.2 -394.2 327.8 -329.7"></path>
+                                </g>
+                                <g transform="translate(385.04677938934947 442.97732865757723)">
+                                    <path id="blob2" d="M301 -259C389.8 -212.1 461.4 -106.1 471.5 10.1C481.7 126.3 430.3 252.7 341.5 306.8C252.7 361 126.3 343 -1.1 344.1C-128.5 345.1 -256.9 365.2 -306.9 311.1C-356.9 256.9 -328.5 128.5 -330.5 -2.1C-332.6 -132.6 -365.2 -265.2 -315.2 -312C-265.2 -358.9 -132.6 -320.1 -13.3 -306.8C106.1 -293.6 212.1 -305.9 301 -259"></path>
+                                </g>
+                                <g transform="translate(492.11863590001485 433.1342928943908)">
+                                    <path id="blob3" d="M306.9 -320.8C381.9 -231.9 416 -116 424.3 8.3C432.6 132.6 415.2 265.2 340.2 324.3C265.2 383.5 132.6 369.2 22 347.3C-88.6 325.3 -177.2 295.6 -255.2 236.4C-333.2 177.2 -400.6 88.6 -389.5 11.2C-378.3 -66.3 -288.6 -132.6 -210.6 -221.4C-132.6 -310.3 -66.3 -421.6 24.8 -446.5C116 -471.3 231.9 -409.6 306.9 -320.8"></path>
+                                </g>
+                                <g transform="translate(460.15474278435033 524.050032508344)">
+                                    <path id="blob4" d="M270 -280.5C347.1 -192.8 405.1 -96.4 423.2 18.1C441.2 132.6 419.5 265.2 342.3 312C265.2 358.9 132.6 320.1 19.4 300.7C-93.8 281.3 -187.6 281.4 -265.1 234.5C-342.6 187.6 -403.8 93.8 -391.4 12.4C-379.1 -69.1 -293.1 -138.1 -215.6 -225.8C-138.1 -313.5 -69.1 -419.7 13.7 -433.4C96.4 -447.1 192.8 -368.1 270 -280.5"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="about-link-div">
+                            <a class="link-button" href="">Github</a>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div class="about-me">
+                    <div class="headings">
                         <h1>I'm Bhavesh Malhotra</h1>
                         <h2>Passionate Full-Stack Web Developer | Machine Learning Enthusiast</h2>
                     </div>
-                    <div>
-                        <p>
-                            I am a third year BSc student in Delhi University.<br>
-                            Skills: Full Stack Web Development, Machine Learning, Deep Learning, Graphics APIs like opengl, vulkan<br>
-                            Programing Languages: C, C++, C#, Python, Java, Javascript, Typescript, HTML, CSS, SASS, RUST, R, Mathematica<br>
-                            I have a youtube channel named Code Bulletin
+                    <div class="paragraph">
+                        <p id="aboutme">
                         </p>
                     </div>
-                    <div>
-                        <div>
-                            <span>Age:</span> 21
+                    <div class="data">
+                        <div id="age" class="div1">
+                            <span>Age:</span>
                         </div>
-                        <div>
-                            <span>Email:</span> codebulletin@gmail.com
+                        <div id="email" class="div2">
+                            <span>Email:</span>
+                        </div class>
+                        <div id="college" class="div3">
+                            <span>College:</span>
                         </div>
-                        <div>
-                            <span>College:</span> Deshbandhu College
-                        </div>
-                        <div>
-                            <span>Place:</span> New Delhi, India
+                        <div id="place" class="div4">
+                            <span>Place:</span>
                         </div>
                     </div>
-                    <div>
-                        <a href="">Github</a>
+                    <div class="about-link-div">
+                        <a class="link-button" href="">Github</a>
                     </div>
                 </div>
             </div>
         </section>
     </body>
+    <script src="./lib/js/tilt.jquery.min.js"></script>
     <script src="./lib/js/index.js"></script>
 </html>

@@ -34,6 +34,7 @@ $gray-blue: #6288c3;
 $light-gray-blue: #7092c9;
 
 $yellow: #FFEE32;
+$very-dark-gray: #101115;
 
 // light mode
 $nav-link-col: $blue;
@@ -44,9 +45,15 @@ $home-heading-1: $dark-blue;
 $home-heading-span-1: $orange;
 $home-heading-2: #000;
 $home-heading-span-2: $purpleish;
-
 $home-link-main: $light-orange, $dark-blue;
 $social-links: $yellow;
+
+$about-bg: white;
+$about-heading: $blue;
+$about-blob: $blue;
+$about-data: $blue;
+$about-link: $red;
+$about-link-hover: $light-red;
 
 
 // dark mode
@@ -54,9 +61,17 @@ $nav-bg-dark: $very-dark-blue;
 $nav-link-dark: $pink;
 $nav-title-dark: $light-green;
 $nav-title-icon-dark: $light-orange;
+
 $home-heading-1-dark: $light-gray-blue;
 $home-heading-span-1-dark: $light-orange;
 $home-heading-2-dark: #f7f7f7;
 $home-heading-span-2-dark: $light-green;
 $home-link-main-dark: $yellow, $very-light-green;
 $social-links-dark: $light-blue;
+
+$about-bg-dark: $very-dark-gray;
+$about-heading-dark: $pink;
+$about-blob-dark: $pink;
+$about-data-dark: $pink;
+$about-link-dark: $blue;
+$about-link-hover-dark: $light-blue;
