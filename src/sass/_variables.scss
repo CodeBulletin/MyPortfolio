@@ -8,6 +8,8 @@ $breakpoints: (
     "3xl": 1600px,
 );
 
+$fade-default: 100px;
+
 //colors
 
 $very-dark-blue: #0D1321;
@@ -34,7 +36,7 @@ $gray-blue: #6288c3;
 $light-gray-blue: #7092c9;
 
 $yellow: #FFEE32;
-$very-dark-gray: #101115;
+$very-dark-gray: #131313;
 
 // light mode
 $nav-link-col: $blue;

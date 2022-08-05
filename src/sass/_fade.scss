@@ -1,0 +1,44 @@
+@use "sass:math";
+
+.fade > * {
+    opacity: 0;
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in !important;
+}
+
+.fade-x > * {
+    opacity: 0;
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in !important;
+}
+
+$fade-values: (
+    "025": math.div($fade-default, 4),
+    "05": math.div($fade-default, 2),
+    "1": $fade-default,
+    "2": $fade-default * 2,
+    "3": $fade-default * 3,
+    "4": $fade-default * 4,
+    "5": $fade-default * 5
+);
+
+@each $key, $value in $fade-values {
+    .fade-from-left-#{$key} > * {
+        transform: translateX(-$value);
+    }
+    
+    .fade-from-right-#{$key} > * {
+        transform: translateX($value);
+    }
+    
+    .fade-from-top-#{$key} > * {
+        transform: translateY(-$value);
+    }
+    
+    .fade-from-bottom-#{$key} > * {
+        transform: translateY($value);
+    }
+}
+
+.rm-fade > * {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}

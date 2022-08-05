@@ -5,14 +5,14 @@ const purgecss = require("gulp-purgecss");
 function buildStyles() {
     return src('src/sass/**/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(purgecss({ content: ['*.html'], safelist:['open', 'active-icon'] }))
+        .pipe(purgecss({ content: ['*.html'], safelist:['open', 'active-icon', 'nav-menu-open', 'opened', 'rm-fade'] }))
         .pipe(dest('lib/css'))
 }
 
 function fDevStyles() {
     return src('src/sass/**/*.scss')
         .pipe(sass())
-        .pipe(purgecss({ content: ['*.html'], safelist:['open', 'active-icon']  }))
+        .pipe(purgecss({ content: ['*.html'], safelist:['open', 'active-icon', 'nav-menu-open', 'opened', 'rm-fade']  }))
         .pipe(dest('lib/css'))
 }
 

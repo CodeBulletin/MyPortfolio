@@ -3,6 +3,8 @@
 @import 'variables';
 @import 'base';
 @import 'breakpoints';
+@import 'fade';
+
 @import 'components/navbar';
 @import 'components/switch';
 @import 'components/link_button';
@@ -10,7 +12,6 @@
 @import 'components/about';
 
 .sticky {
-    // overflow: hidden;
     position: sticky;
     top: 0;
     width: 100%;
@@ -28,4 +29,16 @@
 .d-flex {
     display: flex;
     align-items: center;
+}
+
+.no-x-overflow {
+    overflow-x: hidden;
+}
+
+.no-y-overflow {
+    overflow-y: hidden;
+}
+
+.flex-div {
+    display: flex;
 }
