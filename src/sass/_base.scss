@@ -5,6 +5,14 @@ html, body {
     scroll-behavior: smooth;
 }
 
+:target:before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -100px 0 0;
+}
+
+
 body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -14,6 +22,7 @@ body {
 }
 
 .dark {
-    background-color: #101015;
+    // background-color: #101015;
+    background-color: #111b21;
     color: white;
 }

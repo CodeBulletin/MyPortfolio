@@ -12,7 +12,7 @@ $fade-default: 100px;
 
 //colors
 
-$very-dark-blue: #0D1321;
+$very-dark-blue: #0e161b;
 $dark-blue-2: #181D27;
 $dark-blue: #0A2463;
 $blue: #5658dd; 
@@ -36,7 +36,9 @@ $gray-blue: #6288c3;
 $light-gray-blue: #7092c9;
 
 $yellow: #FFEE32;
-$very-dark-gray: #131313;
+$very-dark-gray: #111b21;
+
+$offwhite: #f7f7f7;
 
 // light mode
 $nav-link-col: $blue;
@@ -57,6 +59,10 @@ $about-data: $blue;
 $about-link: $red;
 $about-link-hover: $light-red;
 
+$skill-bg: $offwhite;
+$skill-show-all: $pink;
+$skill-active: $green;
+
 
 // dark mode
 $nav-bg-dark: $very-dark-blue;
@@ -66,14 +72,17 @@ $nav-title-icon-dark: $light-orange;
 
 $home-heading-1-dark: $light-gray-blue;
 $home-heading-span-1-dark: $light-orange;
-$home-heading-2-dark: #f7f7f7;
+$home-heading-2-dark: $offwhite;
 $home-heading-span-2-dark: $light-green;
 $home-link-main-dark: $yellow, $very-light-green;
 $social-links-dark: $light-blue;
 
-$about-bg-dark: $very-dark-gray;
+$about-bg-dark: lighten($very-dark-gray, 5%);
 $about-heading-dark: $pink;
 $about-blob-dark: $pink;
 $about-data-dark: $pink;
 $about-link-dark: $blue;
 $about-link-hover-dark: $light-blue;
+
+$skill-bg-dark: $very-dark-gray;
+$skill-show-all-dark: $blue;

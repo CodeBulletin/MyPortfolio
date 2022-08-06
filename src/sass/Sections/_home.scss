@@ -93,7 +93,7 @@
                 margin: auto;
                 .link-button {
                     padding: 10px;
-                    padding-bottom: 4px;
+                    padding-bottom: 8px;
                     padding-top: 8px;
                     border-radius: 50%;
 
@@ -103,6 +103,7 @@
                         height: 24px;
                         fill: $social-links;
                         transition: fill 0.25s;
+                        transform: translateY(2px);
                     }
                 }
             }

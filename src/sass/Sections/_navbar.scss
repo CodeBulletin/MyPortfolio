@@ -11,22 +11,24 @@
 
     transition: background-color 0.25s;
 
+    transition: height 0.25s;
+
     .navbar {
         width: 100%;
-        margin: 0 10px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
+        height: fit-content;
+        position: relative;
 
         .nav-mobile {
             display: flex;
             width: 100%;
+            background-color: white;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
+            z-index: 3;
             .nav-title {
                 a {
                     color: black;
@@ -62,7 +64,16 @@
         }
 
         .nav-items {
-            display: none;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-120%);
+            background-color: white;
+            transition: opacity 0.25s, transform 0.25s;
+            z-index: -1;
+            position: absolute;
+            box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
+            
+            display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
@@ -148,10 +159,11 @@
                     background-color: white;
                     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);;
                     padding: 12px 12px;
-                    z-index: 1;
+                    z-index: -1;
                     transform: translateY(0px);
                     opacity: 0;
                     pointer-events: none;
+                    left: 35%;
     
     
                     .toggle {
@@ -168,7 +180,9 @@
         }
 
         .nav-menu-open {
-            display: flex;
+            opacity: 1;
+            transform: translateY(0%);
+            pointer-events: all;
         }
     }
 }
@@ -176,57 +190,61 @@
 .dark {
     .navbar-container {
         background-color: $nav-bg-dark;
-        .nav-mobile {
-            .nav-title {
-                a {
-                    color: white;
-                    .icon {
-                        fill: white;
-                    }
-                    &:hover {
-                        color: $nav-title-dark;
+        .navbar {
+            .nav-mobile {
+                background-color: $nav-bg-dark;
+                .nav-title {
+                    a {
+                        color: white;
                         .icon {
-                            fill: $nav-title-icon-dark;
+                            fill: white;
+                        }
+                        &:hover {
+                            color: $nav-title-dark;
+                            .icon {
+                                fill: $nav-title-icon-dark;
+                            }
                         }
                     }
                 }
             }
-        }
-        .nav-items {
-            .nav-links {
-                .nav-link {
-                    &:link, &:visited {
-                        color: white;
+            .nav-items {
+                background-color: $nav-bg-dark;
+                .nav-links {
+                    .nav-link {
+                        &:link, &:visited {
+                            color: white;
+                        }
+                        &:hover, &:focus {
+                            color: $nav-link-dark;
+                            &:after {
+                                background-color: $nav-link-dark;
+                            }
+                        }
                     }
-                    &:hover, &:focus {
-                        color: $nav-link-dark;
+                    .nav-link-active {
+                        color: $nav-link-dark !important;
                         &:after {
                             background-color: $nav-link-dark;
                         }
                     }
                 }
-                .nav-link-active {
-                    color: $nav-link-dark !important;
-                    &:after {
-                        background-color: $nav-link-dark;
+                .nav-settings {
+                    .icon {
+                        fill: white;
+                        &:hover {
+                            fill: $nav-link-dark
+                        }
                     }
-                }
-            }
-            .nav-settings {
-                .icon {
-                    fill: white;
-                    &:hover {
-                        fill: $nav-link-dark
+                    .active-icon {
+                        fill: $nav-link-dark;
                     }
-                }
-                .active-icon {
-                    fill: $nav-link-dark;
-                }
-                .menu {
-                    background-color: $nav-bg-dark;
-                    div {
-                        span {
-                            color: white;
+                    .menu {
+                        background-color: $nav-bg-dark;
+                        div {
+                            span {
+                                color: white;
+                            }
                         }
                     }
                 }
@@ -235,12 +253,13 @@
     }
 }
 
-@include breakpoint(590px) {
+@include breakpoint(570px) {
     .navbar-container {
         .navbar {
             .nav-items {
                 .nav-settings {
                     .menu {
+                        left: auto;
                         right: 2%;
                     }
                 }
@@ -249,10 +268,14 @@
     }
 }
 
-@include breakpoint(850px) {
+@include breakpoint(877px) {
     .navbar-container {
         .navbar {
+            margin: 0 10px;
             justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             .nav-mobile {
                 width: auto;
                 .nav-menus {
@@ -261,15 +284,32 @@
             }
 
             .nav-items {
-                display: flex;
+                opacity: 1;
+                pointer-events: all;
+                transform: translateY(0%);
+                background-color: white;
+                z-index: 2;
+                position: relative;
+                box-shadow: none;
+
                 width: auto;
                 .nav-links {
                     display: flex;
                 }
                 .nav-settings {
                     display: flex;
+                    margin-right: 1rem;
+                    .menu {
+                        left: 70%;
+                        right: auto;
+                    }
                 }
             }
+        }
+    }
+    .dark {
+        .nav-items {
+            background-color: $nav-bg-dark !important;
         }
     }
 }
@@ -282,7 +322,7 @@
             .nav-items {
                 .nav-settings {
                     .menu {
-                        right: 5%;
+                        left: 70%;
                     }
                 }
             }

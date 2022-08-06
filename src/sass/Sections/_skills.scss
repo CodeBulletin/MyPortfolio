@@ -1,0 +1,134 @@
+.skills {
+    background-color: $skill-bg;
+    .skills-head {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+    }
+    .skills-div {
+        .skill-div {
+            display: none;
+            &:nth-child(-n+10) {
+                display: flex;
+            }
+            flex-direction: column;
+            .skill-card {
+                margin-top: 1.2rem;
+                margin-bottom: 1.2rem;
+                .lvl, .skill {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .active {
+        .skill-div {
+            &:nth-child(n) {
+                display: flex;
+            }
+        }
+    }
+    .flex-div {
+        .link-button {
+            background-color: transparent;
+            border: none;
+            margin: auto;
+            margin-bottom: 2rem;
+            h1 {
+                margin: 0px;
+                font-size: 2rem;
+                color: $skill-show-all;
+                transition: color 0.25s;
+            }
+            i {
+                svg {
+                    width: 50px;
+                    height: 50px;
+                    fill: $skill-show-all;
+                    transition: fill 0.25s;
+                }
+
+                .active {
+                    path {
+                        d: path("M21.75 40.4V16.3l-10.9 10.95-3.25-3.3L24 7.6l16.45 16.35-3.2 3.3L26.3 16.3v24.1Z");
+                    }
+                }
+            }
+
+            &:hover {
+                background: transparent;
+                h1 {
+                    color: lighten($skill-show-all, 5%);
+                }
+                i {
+                    svg {
+                        fill: lighten($skill-show-all, 5%);
+                    }
+                }
+            }
+
+            &:active {
+                background: transparent;
+                h1 {
+                    color: $skill-active;
+                }
+                i {
+                    svg {
+                        fill: $skill-active;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dark {
+    .skills {
+        background-color: $skill-bg-dark;
+    }
+    .link-button {
+        h1 {
+            color: $skill-show-all-dark !important;
+        }
+        i {
+            svg {
+                fill: $skill-show-all-dark !important;
+            }
+        }
+        &:hover {
+            h1 {
+                color: lighten($skill-show-all-dark, 5%) !important;
+            }
+            i {
+                svg {
+                    fill: lighten($skill-show-all-dark, 5%) !important;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(550px) {
+    .skills {
+        .skills-head {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+        .skills-div {
+            .skill-div {
+                .skill-card {
+                    margin-top: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    .lvl, .skill {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

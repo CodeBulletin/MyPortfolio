@@ -73,7 +73,7 @@
 
         <!-- Home -->
         <section id="home" class="home-container no-x-overflow no-y-overflow">
-            <iframe id="particles" src="./lib/p5/sketch.html?bg=101015FF&particles=50&col=A0A0FF7b" frameborder="0" height="0px"></iframe>
+            <iframe id="particles" src="./lib/p5/sketch.html?bg=111B21FF&particles=50&col=A0A0FF7b" frameborder="0" height="0px"></iframe>
             <div class="home">
                 <div class="home-text">
                     <div class="fade fade-from-left-5">
@@ -213,8 +213,24 @@
         </section>
 
         <!-- Skills -->
-        <section id="skills">
-    
+        <section id="skills" class="skills no-x-overflow no-y-overflow">
+            <div class="skills-head fade fade-from-left-4">
+                <h1>Skills</h1>
+            </div>
+            <div class="skills-div" id="skills-div">
+            </div>
+            <div class="flex-div">
+                <button class="link-button" onclick="showallskills('sk-svg', 'skills-div', 'sk-name')">
+                    <h1 id="sk-name">
+                        Show All
+                    </h1>
+                    <i>
+                        <svg height="48" width="48" viewbox="0 0 48 48" id="sk-svg">
+                            <path d="M24 40.4 7.6 23.95l3.25-3.2 10.9 10.9V7.6h4.55v24.05l10.95-10.9 3.2 3.2Z"/>
+                        </svg>
+                    </i>
+                </button>
+            </div>
         </section>
 
         <!-- Project -->

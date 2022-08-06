@@ -5,11 +5,14 @@
 @import 'breakpoints';
 @import 'fade';
 
-@import 'components/navbar';
 @import 'components/switch';
 @import 'components/link_button';
-@import 'components/home';
-@import 'components/about';
+@import 'components/skillcard';
+
+@import 'Sections/navbar';
+@import 'Sections/home';
+@import 'Sections/about';
+@import 'Sections/skills';
 
 .sticky {
     position: sticky;
