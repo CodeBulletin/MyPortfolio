@@ -5,16 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="./lib/css/index.css">
-
-        <script src="./lib/js/jquery.min.js"></script>
-        <script src="./lib/js/snap.svg-min.js"></script>
-        <script src="./lib/js/data.js"></script>
-
+        <link rel="stylesheet" href="./dist/index.css">
         <title>MyPortfolio</title>
     </head>
-    <body id="body" onload="on_load()" class="dark">
-
+    <body id="body" class="dark">
         <!-- Navbar -->
         <section id="Navbar" class="navbar-container sticky">
             <nav class="navbar">
@@ -29,7 +23,7 @@
                         </a>
                     </div>
                     <div class="nav-menus">
-                        <button class="nav-menu" onclick="nav_menu_click(this, 'nav-items')" aria-label="Main Menu">
+                        <button class="nav-menu" id="nav-sm-buton" aria-label="Main Menu"> 
                             <svg width="48" height="48" viewBox="0 0 100 100">
                                 <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
                                 <path class="line line2" d="M 20,50 H 80" />
@@ -48,7 +42,7 @@
                         <a href="#experience" class="nav-link">Experience</a>
                     </div>
                     <div class="nav-settings">
-                        <button class="empty-button" onclick="menu_open('settings', 'AV2')">
+                        <button class="empty-button" id="nav-setting-button">
                             <svg id="AV2" xmlns="http://www.w3.org/2000/svg" height="40" width="40" class="icon" viewBox="0 0 48 48">
                                 <path d="m19.4 44-1-6.3q-.95-.35-2-.95t-1.85-1.25l-5.9 2.7L4 30l5.4-3.95q-.1-.45-.125-1.025Q9.25 24.45 9.25 24q0-.45.025-1.025T9.4 21.95L4 18l4.65-8.2 5.9 2.7q.8-.65 1.85-1.25t2-.9l1-6.35h9.2l1 6.3q.95.35 2.025.925Q32.7 11.8 33.45 12.5l5.9-2.7L44 18l-5.4 3.85q.1.5.125 1.075.025.575.025 1.075t-.025 1.05q-.025.55-.125 1.05L44 30l-4.65 8.2-5.9-2.7q-.8.65-1.825 1.275-1.025.625-2.025.925l-1 6.3ZM24 30.5q2.7 0 4.6-1.9 1.9-1.9 1.9-4.6 0-2.7-1.9-4.6-1.9-1.9-4.6-1.9-2.7 0-4.6 1.9-1.9 1.9-1.9 4.6 0 2.7 1.9 4.6 1.9 1.9 4.6 1.9Z"/>
                             </svg>
@@ -58,7 +52,7 @@
                                 <span>Dark Mode</span>
                                 <div class="toggle">
                                     <label class="switch">
-                                        <input type="checkbox" id="dark_mode_check_box" onclick="toggle_darkmode()">
+                                        <input type="checkbox" id="dark_mode_check_box" />
                                         <div>
                                             <span></span>
                                         </div>
@@ -73,7 +67,8 @@
 
         <!-- Home -->
         <section id="home" class="home-container no-x-overflow no-y-overflow">
-            <iframe id="particles" src="./lib/p5/sketch.html?bg=111B21FF&particles=50&col=A0A0FF7b" frameborder="0" height="0px"></iframe>
+            <!-- <iframe id="particles" src="./lib/p5/sketch.html?bg=111B21FF&particles=50&col=A0A0FF7b" frameborder="0" height="0px"></iframe> -->
+            <div id="particles-sandbox"></div>
             <div class="home">
                 <div class="home-text">
                     <div class="fade fade-from-left-5">
@@ -138,8 +133,8 @@
                     </div>
                 </div>
 
-                <div class="home-gif fade fade-from-right-5">
-                    <a href="https://codebulletin.github.io/MyPortfolio/" class="link-button" data-tilt> 
+                <div class="home-gif fade fade-from-right-5" data-tilt>
+                    <a href="https://codebulletin.github.io/MyPortfolio/" class="link-button"> 
                         <img id="home_gif" src="./data/gifs/dev_animado.gif" alt="">
                     </a>
                 </div>
@@ -220,7 +215,7 @@
             <div class="skills-div" id="skills-div">
             </div>
             <div class="flex-div">
-                <button class="link-button" onclick="showallskills('sk-svg', 'skills-div', 'sk-name')">
+                <button class="link-button" id="sk-button">
                     <h1 id="sk-name">
                         Show All
                     </h1>
@@ -238,6 +233,5 @@
             
         </section>
     </body>
-    <script src="./lib/js/tilt.jquery.min.js"></script>
-    <script src="./lib/js/index.js"></script>
+    <script src="./dist/main.js"></script>
 </html>

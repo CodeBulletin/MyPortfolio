@@ -1,4 +1,2 @@
-lib/css/index.css linguist-vendored
-lib/js/jquery.min.js linguist-vendored
-lib/js/snap.svg-min.min.js linguist-vendored
-lib/js/tilt.jquery.min.js linguist-vendored
+dist/index.css linguist-vendored
+dist/main.js linguist-vendored
