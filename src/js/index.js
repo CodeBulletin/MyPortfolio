@@ -5,6 +5,8 @@ import { body, gif_light, gif_dark, checkbox, home_gif } from "./data"
 import { animation } from "./animation"
 import { Observe } from "./observer";
 
+import styles from '../sass/index.scss'
+
 document.getElementById('nav-setting-button').onclick = () => {
     var element = document.getElementById('settings');
     var element2 = document.getElementById('AV2');
