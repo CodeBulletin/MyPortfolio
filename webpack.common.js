@@ -3,27 +3,33 @@ const path = require('path');
 
 module.exports = {
     mode:"development",
-    entry: './src/js/index.js',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: "main.[hash].js",
-        clean: true,
+    entry: {
+        main: './src/js/index.js',
+        vendor: './src/js/vendor.js'
     },
     module: {
         rules: [
             {
-                test: /\.scss$/i,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ],
+                test: /\.html$/i,
+                use: ["html-loader"]
+            }, {
+                test: /\.(gif)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: "assets/gif/[name].[hash].[ext]"
+                }
+            }, {
+                test: /\.(svg)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: "assets/svg/[name].[hash].[ext]"
+                }
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: ".\\src\\index.html"
-        })
+        }),
     ],
 };

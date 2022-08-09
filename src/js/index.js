@@ -1,11 +1,11 @@
+import styles from '../sass/index.scss'
+
 import { setdata } from "./load";
 import { resize_sections } from "./resize"
 import { scrollfn } from "./scroll"
-import { body, gif_light, gif_dark, checkbox, home_gif } from "./data"
+import { body, gif_light, gif_dark, checkbox, home_gif_dark, home_gif_light } from "./data"
 import { animation } from "./animation"
 import { Observe } from "./observer";
-
-import styles from '../sass/index.scss'
 
 document.getElementById('nav-setting-button').onclick = () => {
     var element = document.getElementById('settings');
@@ -19,12 +19,14 @@ document.getElementById('dark_mode_check_box').onchange = () => {
     if (body.classList.contains('dark')) { 
         body.classList.remove('dark');
         localStorage.setItem('dark_mode', "no");
-        home_gif.src = gif_light;
+        home_gif_light.style.display = 'block';
+        home_gif_dark.style.display = 'none';
     }
     else {
         body.classList.add('dark');
         localStorage.setItem('dark_mode', "yes");
-        home_gif.src = gif_dark;
+        home_gif_dark.style.display = 'block';
+        home_gif_light.style.display = 'none';
     }
 }
 
@@ -49,9 +51,10 @@ function on_load() {
     }
     if (localStorage.getItem('dark_mode') === "yes") {
         checkbox.checked = true;
+        home_gif_light.style.display = 'none';
     } else {
         body.classList.remove('dark');
-        home_gif.src = gif_light;
+        home_gif_dark.style.display = 'none';
     }
 
     setdata();
@@ -65,6 +68,4 @@ window.onload = on_load;
 window.onresize = resize_sections;
 window.onscroll = scrollfn;
 
-import jquery from "jquery";
-import tiltJquery from "tilt.js";
 import { p5sketch } from "./particles" 

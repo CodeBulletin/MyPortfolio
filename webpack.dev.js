@@ -6,7 +6,18 @@ module.exports = merge(common, {
     mode: "development",
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "main.[hash].js",
-        clean: true,
+        filename: "[name].bundle.js",
+    },
+    module: {
+        rules: [
+            {
+                test: /\.scss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ],
+            }, 
+        ]
     },
 });
