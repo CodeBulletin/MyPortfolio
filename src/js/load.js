@@ -31,6 +31,8 @@ export function setdata() {
 
     document.getElementById("aboutme").innerHTML = aboutme();
 
+    document.getElementById("copyrightyear").innerHTML = (new Date().getFullYear()).toString()
+
     setskills();
 }
 

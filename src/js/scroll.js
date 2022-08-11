@@ -5,7 +5,7 @@ export function scrollfn() {
     
     sections.forEach((section) => {
         const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - get_nav_height() - 5 ) {
+        if (scrollY >= sectionTop - window.innerHeight / 2) {
             current = section.getAttribute("id");
         }
     });

@@ -1,5 +1,6 @@
 .skills {
     background-color: $skill-bg;
+    transition: background-color 0.25s;
     .skills-head {
         display: flex;
         justify-content: center;
@@ -7,6 +8,7 @@
         h1 {
             font-size: 2.5rem;
             text-align: center;
+            margin: 0;
         }
     }
     .skills-div {

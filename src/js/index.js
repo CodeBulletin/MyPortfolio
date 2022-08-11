@@ -4,7 +4,7 @@ import { setdata } from "./load";
 import { resize_sections } from "./resize"
 import { scrollfn } from "./scroll"
 import { body, gif_light, gif_dark, checkbox, home_gif_dark, home_gif_light } from "./data"
-import { animation } from "./animation"
+import { animation, sleep } from "./animation"
 import { Observe } from "./observer";
 
 document.getElementById('nav-setting-button').onclick = () => {
@@ -45,7 +45,7 @@ document.getElementById('sk-button').onclick = () => {
     document.getElementById('sk-name').innerHTML = document.getElementById('sk-svg').classList.contains("active") ? "Show Less" : "Show All"
 }
 
-function on_load() {
+async function on_load() {
     if(localStorage.getItem('dark_mode') === null) {
         localStorage.setItem('dark_mode', "yes");
     }
@@ -61,6 +61,7 @@ function on_load() {
     resize_sections();
     scrollfn();
     animation();
+    await sleep(500)
     Observe();
 }
 

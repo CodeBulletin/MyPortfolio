@@ -253,7 +253,7 @@
     }
 }
 
-@include breakpoint(570px) {
+@include breakpoint(531px) {
     .navbar-container {
         .navbar {
             .nav-items {
@@ -300,7 +300,7 @@
                     display: flex;
                     margin-right: 1rem;
                     .menu {
-                        left: 70%;
+                        left: 65%;
                         right: auto;
                     }
                 }
@@ -322,7 +322,7 @@
             .nav-items {
                 .nav-settings {
                     .menu {
-                        left: 70%;
+                        left: 65%;
                     }
                 }
             }

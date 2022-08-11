@@ -1,0 +1,157 @@
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    background-color: $form-bg;
+    transition: all 0.25s;
+    .header {
+        text-align: center;
+        h1 {
+            padding: 0;
+            margin: 2.5rem auto;
+            font-size: 2.5rem;
+            transition: all 0.25s;
+            color: $form-header;
+        }
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        width: 75%;
+        margin: auto;
+        margin-bottom: 2.5rem;
+        .contact-input {
+            display: flex;
+            position: relative;
+            width: 100%;
+            .input {
+                position: relative;
+                background-color: transparent;
+                border: 3px solid $form-input-border;
+                padding: 0.8rem 1.5rem;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                font-weight: 500;
+                color: $form-input-border;
+                font-family: inherit;
+                transition: all 0.25s ease-out;
+                width: 100%;
+
+                &:focus {
+                    outline: none;
+                    border-color: $form-input-border-active;
+                    color: $form-input-border-active;
+                }
+                &:placeholder-shown ~ .label {
+                    font-size: 1rem;
+                    transform: translate3d(3px, 3px, 0px);
+                    background-color: transparent;
+                    border-radius: 0rem;
+                    padding: 0.8rem 1.5rem;
+                    color: $form-input-border;
+                    cursor: text;
+                }
+                &:focus ~ .label {                    
+                    font-size: 0.7rem;
+                    transform: translate3d(1.5rem, -0.65rem, 0);
+                    background-color: $form-input-border-active;
+                    border-radius: 0.25rem;
+                    padding: 0.25rem 0.3rem;
+                    color: $form-bg;
+                }
+            }
+            .label {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                font-weight: 500;
+                font-family: inherit;
+                transition: all 0.25s ease-out;
+
+                font-size: 0.7rem;
+                transform: translate3d(1.5rem, -0.65rem, 0);
+                background-color: $form-input-border;
+                border-radius: 0.25rem;
+                padding: 0.25rem 0.3rem;
+                color: $form-bg;
+            }
+        }
+        textarea {
+            resize: vertical;
+            &::-webkit-resizer {
+                display: none;
+            }
+        }
+        .form-submit {
+            font-size: 1.5rem;
+            padding: 1rem 1.5rem;
+            max-width: fit-content;
+            margin: auto;
+            cursor: pointer;
+            border-radius: 1rem;
+            border: none;
+            outline: none;
+            color: $form-bg;
+            background-color: $form-submit;
+            transition: all 0.25s;
+            &:hover {
+                background-color: $form-submit-hover;
+            }
+        }
+    }
+}
+
+.dark {
+    .contact-me {
+        background-color: $form-bg-dark;
+        .header h1 {
+            color: $form-header-dark
+        }
+        .contact-input {
+            .input {
+                border-color: $form-input-border-dark;
+                color: $form-input-border-dark;
+                &:focus {
+                    border-color: $form-input-border-active-dark;
+                    color: $form-input-border-active-dark;
+                }
+                &:placeholder-shown ~ .label {
+                    color: $form-input-border-dark;
+                }
+                &:focus ~ .label {
+                    color: $form-bg-dark;
+                    background-color: $form-input-border-active-dark;
+                }
+            }
+            .label {
+                color: $form-bg-dark;
+                background-color: $form-input-border-dark;
+            }
+        }
+        .form-submit {
+            color: $form-bg-dark;
+            background-color: $form-submit-dark;
+            &:hover {
+                background-color: $form-submit-hover-dark;
+            }
+        }
+    }
+}
+
+@include breakpoint(550px) {
+    .contact-me {
+        .header {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@include breakpoint(950px) {
+    .contact-me {
+        .contact-form {
+            width: 50%;
+        }
+    }
+}

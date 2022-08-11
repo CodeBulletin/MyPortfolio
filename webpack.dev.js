@@ -1,3 +1,4 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const common = require("./webpack.common")
 const { merge } = require("webpack-merge")
 const path = require('path');
@@ -5,7 +6,6 @@ const path = require('path');
 module.exports = merge(common, {
     mode: "development",
     output: {
-        path: path.resolve(__dirname, 'dist'),
         filename: "[name].bundle.js",
     },
     module: {
@@ -13,11 +13,19 @@ module.exports = merge(common, {
             {
                 test: /\.scss$/i,
                 use: [
-                    "style-loader",
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader"
                 ],
             }, 
         ]
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "[name].bundle.css"
+        })
+    ],
+    optimization: {
+        runtimeChunk: 'single'
     },
 });

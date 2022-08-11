@@ -256,6 +256,9 @@
             fill: white !important;
         }
     }
+    svg {
+        transform: translateY(3px) !important;
+    }
 }
 
 .twitter {

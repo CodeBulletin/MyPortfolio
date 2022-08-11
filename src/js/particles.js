@@ -111,7 +111,7 @@ const sketch = (s) => {
                 bgcol = s.lerpColor(bg, bg_dark, transition);
                 ballCol = s.lerpColor(ballColor, ballColor_dark, transition);
             }
-            transition += 0.5 * s.deltaTime/100.0;
+            transition += 0.6 * s.deltaTime/100.0;
         }
 
         s.background(bgcol);

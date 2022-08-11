@@ -63,6 +63,9 @@ $skill-bg: $offwhite;
 $skill-show-all: $pink;
 $skill-active: $green;
 
+$footer-bg: $blue;
+$footer-icon: white;
+$footer-copyright: white;
 
 // dark mode
 $nav-bg-dark: $very-dark-blue;
@@ -86,3 +89,25 @@ $about-link-hover-dark: $light-blue;
 
 $skill-bg-dark: $very-dark-gray;
 $skill-show-all-dark: $blue;
+
+$about-bg-dark: lighten($very-dark-gray, 5%);
+
+$footer-bg-dark: darken($pink, 5%);
+$footer-icon-dark: white;
+$footer-copyright-dark: white;
+
+
+//Contact form
+$form-header-dark: $offwhite;
+$form-bg-dark: lighten($very-dark-gray, 5%);
+$form-input-border-dark: darken($offwhite, 20%);
+$form-input-border-active-dark: $green;
+$form-submit-dark: $pink;
+$form-submit-hover-dark: lighten($pink, 5%);
+
+$form-header: black;
+$form-bg: white;
+$form-input-border: darken($offwhite, 60%);
+$form-input-border-active: $pink;
+$form-submit: $blue;
+$form-submit-hover: $light-blue;
