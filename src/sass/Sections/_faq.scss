@@ -1,0 +1,36 @@
+.faq {
+    transition: all 0.25s;
+    background-color: $faq-bg;
+    display: flex;
+    flex-direction: column;
+    h1 {
+        transition: all;
+    }
+    .accordian {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2.5rem;
+        .accordian-list {
+            .accordian-item {
+                .head {
+                    transition: all;
+                }
+                .item {
+                    transition: all;
+                }
+            }
+        }
+    }
+}
+
+.dark .faq {
+    background-color: $faq-bg-dark;
+}
+
+@include breakpoint(900px) {
+    .faq {
+        .accordian {
+            width: 70%;
+        }
+    }
+}

@@ -61,11 +61,6 @@ $about-link-hover: $light-red;
 
 $skill-bg: $offwhite;
 $skill-show-all: $pink;
-$skill-active: $green;
-
-$footer-bg: $blue;
-$footer-icon: white;
-$footer-copyright: white;
 
 // dark mode
 $nav-bg-dark: $very-dark-blue;
@@ -90,14 +85,30 @@ $about-link-hover-dark: $light-blue;
 $skill-bg-dark: $very-dark-gray;
 $skill-show-all-dark: $blue;
 
-$about-bg-dark: lighten($very-dark-gray, 5%);
+//FAQ
 
-$footer-bg-dark: darken($pink, 5%);
-$footer-icon-dark: white;
-$footer-copyright-dark: white;
+$faq-items: 3;
+
+//FAQ - light
+$faq-bg: $offwhite;
+$faq-paragraph: darken(rgba(48, 69, 92, 0.8), 5%);
+$faq-icon: $pink;
+
+//FAQ - dark
+$faq-bg-dark: $very-dark-gray;
+$faq-paragraph-dark: rgba(255, 255, 255, 0.7);
+$faq-icon-dark: $blue;
 
 
-//Contact form
+//Contact form - light
+$form-header: black;
+$form-bg: white;
+$form-input-border: darken($offwhite, 60%);
+$form-input-border-active: $pink;
+$form-submit: $blue;
+$form-submit-hover: $light-blue;
+
+//Contact form - dark
 $form-header-dark: $offwhite;
 $form-bg-dark: lighten($very-dark-gray, 5%);
 $form-input-border-dark: darken($offwhite, 20%);
@@ -105,9 +116,13 @@ $form-input-border-active-dark: $green;
 $form-submit-dark: $pink;
 $form-submit-hover-dark: lighten($pink, 5%);
 
-$form-header: black;
-$form-bg: white;
-$form-input-border: darken($offwhite, 60%);
-$form-input-border-active: $pink;
-$form-submit: $blue;
-$form-submit-hover: $light-blue;
+
+//footer - light
+$footer-bg: $pink;
+$footer-icon: $offwhite;
+$footer-copyright: $offwhite;
+
+//footer -dark
+$footer-bg-dark: darken($blue, 5%);
+$footer-icon-dark: $offwhite;
+$footer-copyright-dark: $offwhite;

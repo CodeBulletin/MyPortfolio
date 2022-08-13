@@ -1,0 +1,12 @@
+.projects {
+    background-color: white;
+    canvas {
+        margin: 0;
+        padding: 0;
+        filter: blur(2px);
+    }
+}
+
+.dark .projects {
+    background-color: lighten($very-dark-gray, 5%);
+}

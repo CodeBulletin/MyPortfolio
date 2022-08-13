@@ -14,7 +14,7 @@ export function resize_sections() {
     var skills = document.getElementById('skills');
     skills.style.minHeight = height_left.toString() + "px";
 
-    // var projects = document.getElementById('projects');
-    // projects.style.minHeight = height_left.toString() + "px";
+    var projects = document.getElementById('projects');
+    projects.style.height = height_left.toString() + "px";
 
 }

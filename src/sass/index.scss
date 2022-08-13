@@ -8,11 +8,14 @@
 @import 'components/switch';
 @import 'components/link_button';
 @import 'components/skillcard';
+@import 'components/accordian';
 
 @import 'Sections/navbar';
 @import 'Sections/home';
 @import 'Sections/about';
 @import 'Sections/skills';
+@import 'Sections/projects';
+@import 'Sections/faq';
 @import 'Sections/contactform';
 @import 'Sections/footer';
 
@@ -46,4 +49,18 @@
 
 .flex-div {
     display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+    column-gap: 2rem;
 }

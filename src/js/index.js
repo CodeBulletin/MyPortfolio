@@ -1,4 +1,5 @@
 import styles from '../sass/index.scss'
+import { accordian } from './accordian';
 
 import { setdata } from "./load";
 import { resize_sections } from "./resize"
@@ -6,6 +7,7 @@ import { scrollfn } from "./scroll"
 import { body, gif_light, gif_dark, checkbox, home_gif_dark, home_gif_light } from "./data"
 import { animation, sleep } from "./animation"
 import { Observe } from "./observer";
+import { run_projects } from "./projects"
 
 document.getElementById('nav-setting-button').onclick = () => {
     var element = document.getElementById('settings');
@@ -58,15 +60,17 @@ async function on_load() {
     }
 
     setdata();
+    accordian();
     resize_sections();
     scrollfn();
     animation();
-    await sleep(500)
+    await sleep(500);
     Observe();
+    run_projects();
 }
 
 window.onload = on_load;
 window.onresize = resize_sections;
 window.onscroll = scrollfn;
 
-import { p5sketch } from "./particles" 
+import "./particles";

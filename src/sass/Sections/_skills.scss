@@ -1,6 +1,8 @@
 .skills {
     background-color: $skill-bg;
-    transition: background-color 0.25s;
+    transition: all 0.25s;
+    max-height: auto;
+    height: 100%;
     .skills-head {
         display: flex;
         justify-content: center;
@@ -40,6 +42,9 @@
             border: none;
             margin: auto;
             margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             h1 {
                 margin: 0px;
                 font-size: 2rem;
@@ -47,6 +52,8 @@
                 transition: color 0.25s;
             }
             i {
+                display: flex;
+                margin: auto;
                 svg {
                     width: 50px;
                     height: 50px;
@@ -69,18 +76,6 @@
                 i {
                     svg {
                         fill: lighten($skill-show-all, 5%);
-                    }
-                }
-            }
-
-            &:active {
-                background: transparent;
-                h1 {
-                    color: $skill-active;
-                }
-                i {
-                    svg {
-                        fill: $skill-active;
                     }
                 }
             }
