@@ -64,12 +64,6 @@ const navbar = document.getElementById('Navbar');
 const home_gif_dark = document.getElementById('home_gif1');
 const home_gif_light = document.getElementById('home_gif2');
 
-const light_particles = "./lib/p5/sketch.html?bg=F7F7F7FF&particles=50&col=0000007b";
-const dark_particles = "./lib/p5/sketch.html?bg=111B21FF&particles=50&col=A0A0FF7b";
-
-const gif_light = "./data/gifs/coding.gif";
-const gif_dark = "./data/gifs/dev_animado.gif";
-
 var nav_height;
 
 function set_nav_height(height) {
@@ -80,4 +74,4 @@ function get_nav_height() {
     return nav_height;
 }
 
-export {Data, Skills, sections, nav_links, body, checkbox, navbar, home_gif_dark, home_gif_light, gif_dark, gif_light, set_nav_height, get_nav_height}
+export {Data, Skills, sections, nav_links, body, checkbox, navbar, home_gif_dark, home_gif_light, set_nav_height, get_nav_height}

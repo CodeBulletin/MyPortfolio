@@ -85,6 +85,7 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
+                align-items: center;
                 .nav-link {
                     margin: 1rem 1rem;
                     text-align: center;
@@ -127,54 +128,6 @@
                         background-color: $nav-link-col;
                         height: 3px;
                     }
-                }
-    
-                &:first-child {
-                    margin-left: 0;
-                }
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-            .nav-settings {
-                display: flex;
-                .icon {
-                    cursor: pointer;
-                    transform: rotate(0deg);
-                    transition: transform 0.25s, fill 0.25s;
-    
-                    &:hover {
-                        transform: rotate(90deg);
-                        fill: $nav-link-col;
-                    }
-                }
-                .active-icon {
-                    transform: rotate(90deg);
-                    fill: $nav-link-col;
-                    transition: transform 0.25s, fill 0.25s;
-                }
-                .menu {
-                    position: absolute;
-                    transition: opacity 0.25s ease-out, transform 0.25s ease-out, background-color 0.25s;
-                    background-color: white;
-                    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);;
-                    padding: 12px 12px;
-                    z-index: -1;
-                    transform: translateY(0px);
-                    opacity: 0;
-                    pointer-events: none;
-                    left: 35%;
-    
-    
-                    .toggle {
-                        margin-left: 10px;
-                    }
-                }
-                .open {
-                    opacity: 1;
-                    transform: translateY(50px);
-                    pointer-events: all;
-                    transition: opacity 0.25s ease-out, transform 0.25s ease-out, background-color 0.25s;
                 }
             }
         }
@@ -229,40 +182,6 @@
                         }
                     }
                 }
-                .nav-settings {
-                    .icon {
-                        fill: white;
-                        &:hover {
-                            fill: $nav-link-dark
-                        }
-                    }
-                    .active-icon {
-                        fill: $nav-link-dark;
-                    }
-                    .menu {
-                        background-color: $nav-bg-dark;
-                        div {
-                            span {
-                                color: white;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@include breakpoint(531px) {
-    .navbar-container {
-        .navbar {
-            .nav-items {
-                .nav-settings {
-                    .menu {
-                        left: auto;
-                        right: 2%;
-                    }
-                }
             }
         }
     }
@@ -296,14 +215,6 @@
                 .nav-links {
                     display: flex;
                 }
-                .nav-settings {
-                    display: flex;
-                    margin-right: 1rem;
-                    .menu {
-                        left: 65%;
-                        right: auto;
-                    }
-                }
             }
         }
     }
@@ -319,13 +230,6 @@
         .navbar {
             width: 80%;
             margin: 0 0;
-            .nav-items {
-                .nav-settings {
-                    .menu {
-                        left: 65%;
-                    }
-                }
-            }
         }
     }
 }

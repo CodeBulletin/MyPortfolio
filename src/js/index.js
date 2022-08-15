@@ -4,18 +4,9 @@ import { accordian } from './accordian';
 import { setdata } from "./load";
 import { resize_sections } from "./resize"
 import { scrollfn } from "./scroll"
-import { body, gif_light, gif_dark, checkbox, home_gif_dark, home_gif_light } from "./data"
+import { body, checkbox, home_gif_dark, home_gif_light } from "./data"
 import { animation, sleep } from "./animation"
 import { Observe } from "./observer";
-import { run_projects } from "./projects"
-
-document.getElementById('nav-setting-button').onclick = () => {
-    var element = document.getElementById('settings');
-    var element2 = document.getElementById('AV2');
-
-    element.classList.toggle('open');
-    element2.classList.toggle('active-icon', element.classList.contains('open'));
-}
 
 document.getElementById('dark_mode_check_box').onchange = () => {
     if (body.classList.contains('dark')) { 
@@ -66,7 +57,6 @@ async function on_load() {
     animation();
     await sleep(500);
     Observe();
-    run_projects();
 }
 
 window.onload = on_load;

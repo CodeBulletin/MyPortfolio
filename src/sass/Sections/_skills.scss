@@ -14,7 +14,9 @@
         }
     }
     .skills-div {
+        display: grid;
         .skill-div {
+            grid-column: 1;
             display: none;
             &:nth-child(-n+10) {
                 display: flex;
@@ -124,6 +126,21 @@
                     .lvl, .skill {
                         font-size: 1.5rem;
                     }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(1000px) {
+    .skills {
+        .skills-div {
+            max-width: fit-content;
+            margin: auto;
+            .skill-div {
+                width: 500px;
+                &:nth-child(2n) {
+                    grid-column: 2;
                 }
             }
         }

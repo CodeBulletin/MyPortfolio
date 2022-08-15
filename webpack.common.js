@@ -13,6 +13,12 @@ module.exports = {
                 test: /\.html$/i,
                 use: ["html-loader"]
             }, {
+                test: /\.(png)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: "assets/png/[name].[hash].[ext]"
+                }
+            }, {
                 test: /\.(gif)$/,
                 type: 'asset/resource',
                 generator: {

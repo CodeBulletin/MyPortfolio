@@ -1,9 +1,18 @@
 .projects {
     background-color: white;
-    canvas {
-        margin: 0;
-        padding: 0;
-        filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .ps {
+        display: flex;
+        flex-direction: row;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        flex-wrap: wrap;
     }
 }
 
