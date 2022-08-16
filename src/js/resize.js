@@ -10,11 +10,4 @@ export function resize_sections() {
     
     var about = document.getElementById('about');
     about.style.minHeight = height_left.toString() + "px";
-    
-    var skills = document.getElementById('skills');
-    skills.style.minHeight = height_left.toString() + "px";
-
-    var projects = document.getElementById('projects');
-    projects.style.height = height_left.toString() + "px";
-
 }

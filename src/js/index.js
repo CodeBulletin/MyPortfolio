@@ -32,12 +32,6 @@ document.getElementById('nav-sm-buton').onclick = () => {
     menu.classList.toggle('nav-menu-open', button.classList.contains('opened'));
 }
 
-document.getElementById('sk-button').onclick = () => {
-    document.getElementById('sk-svg').classList.toggle("active");
-    document.getElementById('skills-div').classList.toggle("active");
-    document.getElementById('sk-name').innerHTML = document.getElementById('sk-svg').classList.contains("active") ? "Show Less" : "Show All"
-}
-
 async function on_load() {
     if(localStorage.getItem('dark_mode') === null) {
         localStorage.setItem('dark_mode', "yes");

@@ -14,11 +14,28 @@ function aboutme() {
     );
 }
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}  
+
 function setskills() {
     var html = "";
     var i = 0;
+    var colors = ['Advance', 'Expert', 'Intermediate']
     for (const [key, value] of Object.entries(Skills)) {
-        html += `<div class='skill-div fade fade-from-right-4'><div class='skill-card ${value}'><div class='bar'></div><h1 class='skill'>${key}</h1><h1 class='lvl'>${value}</h1></div></div>`;
+        html += `
+        <div class='skill-div fade fade-from-right-4'>
+            <div class='skill-card ${colors[getRandomInt(3)]}'>
+                <a href = '${value[1]}' style='text-decoration: none;'>
+                    <div class='bar'>
+                    </div>
+                    <img class='logo' src='${value[0]}' alt='${key}'/>
+                    <h1 class='skill'>
+                        ${key}
+                    </h1>
+                </a>
+            </div>
+        </div>`;
         i += 1;
     }
 
@@ -62,8 +79,8 @@ function load_projects() {
             </div>
         </div>
     </div>`
-    const a = Array.from(document.getElementsByClassName('ps'))[0];
-    for(var i = 0; i < 6; i++) {
+    const a = document.getElementById('projects-display');
+    for(var i = 0; i < 8; i++) {
         a.innerHTML += element;
     }
 }

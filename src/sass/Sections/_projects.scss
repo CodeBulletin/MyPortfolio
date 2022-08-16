@@ -2,17 +2,22 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     h1 {
         font-size: 3rem;
         text-align: center;
     }
-    .ps {
+    .projects-display{
         display: flex;
         flex-direction: row;
-        row-gap: 1rem;
-        column-gap: 1rem;
         flex-wrap: wrap;
+        justify-content: center;
+        .card {
+            display: none;
+            margin: 1rem;
+        }
+        :nth-child(-n + 5) {
+            display: block;
+        }
     }
 }
 
