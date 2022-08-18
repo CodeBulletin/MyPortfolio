@@ -2,6 +2,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    padding-bottom: 2rem;
     h1 {
         font-size: 3rem;
         text-align: center;
@@ -12,11 +13,42 @@
         flex-wrap: wrap;
         justify-content: center;
         .card {
-            display: none;
             margin: 1rem;
+            display: flex;
+            width: fit-content;
+            height: fit-content;
         }
-        :nth-child(-n + 5) {
-            display: block;
+        .ViewALL {
+            display: flex;
+            position: relative;
+            margin: 1rem;
+            overflow: hidden;
+            border: 4px solid white;
+            border-radius: 5px;
+            border-style: double;
+            cursor: pointer;
+            img {
+                display: flex;
+                width: 408.5px;
+                height: 233px;
+                z-index: 0;
+                filter: blur(2px);
+            }
+            div {
+                position: absolute;
+                display: flex;
+                top: 0%;
+                bottom: 0%;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                svg {
+                    fill: white;
+                }
+            }
         }
     }
 }

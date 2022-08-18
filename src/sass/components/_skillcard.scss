@@ -5,10 +5,11 @@
         column-gap: 1rem;
         padding: 1rem 2rem;
         position: relative;
-        border-radius: 5px;
+        border-radius: 10px;
         margin: 0;
         align-items: center;
         transition: transform 0.25s;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
         .bar {
             position: absolute;
             border-radius: 10px;
@@ -16,6 +17,7 @@
             top: 0;
             left: 0;
             z-index: 0;
+            width: 100%;
         }
 
         .skill {
@@ -31,42 +33,55 @@
         }
         &:hover {
             transform: scale(1.2);
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
         }
     }
 }
 
-.Expert {
+.A1 {
     .bar {
-        width: 100%;
         background: #fc4a1a;
-        background: -webkit-linear-gradient(to left, #f7b733, #fc4a1a);
-        background: linear-gradient(to left, #f7b733, #fc4a1a);
+        background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+        background: linear-gradient(to right, #f7b733, #fc4a1a);
     }
 }
 
-.Advance {
+.A2 {
     .bar {
-        width: 100%;
-        background: #2193b0;
-        background: -webkit-linear-gradient(to left, #75e5ff, #145e70);
-        background: linear-gradient(to left, #75e5ff, #145e70);
+        background: #DA4453;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #89216B, #DA4453);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 }
 
-.Intermediate {
+.A3 {
     .bar {
-        width: 100%;
-        background: #1f4037;
-        background: -webkit-linear-gradient(to left, #99f2c8, #1f4037);
-        background: linear-gradient(to left, #99f2c8, #1f4037);
+        background: #11998e;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 }
 
-.Beginner {
+.A4 {
     .bar {
-        width: 100%;
-        background: #304352;
-        background: -webkit-linear-gradient(to left, #d7d2cc, #304352);
-        background: linear-gradient(to left, #d7d2cc, #304352);
+        background: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+}
+
+.A5 {
+    .bar {
+        background: #56CCF2;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+}
+
+.A6 {
+    .bar {
+        background: #232526;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 }

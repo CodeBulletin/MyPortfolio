@@ -1,4 +1,5 @@
-import styles from '../sass/index.scss'
+import '../sass/loader.scss'
+import '../sass/index.scss'
 import { accordian } from './accordian';
 
 import { setdata } from "./load";
@@ -48,9 +49,11 @@ async function on_load() {
     accordian();
     resize_sections();
     scrollfn();
-    animation();
-    await sleep(500);
+    await sleep(3000);
+    document.getElementById('loading-page').style.display="none";
+    await sleep(100);
     Observe();
+    animation();
 }
 
 window.onload = on_load;

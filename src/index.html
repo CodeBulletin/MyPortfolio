@@ -7,6 +7,22 @@
         <title>MyPortfolio</title>
     </head>
     <body id="body" class="dark">
+        <!-- Page Loader -->
+        <div class="page" id="loading-page">
+            <div class="loader">
+                <div class="box box0"><div></div></div>
+                <div class="box box1"><div></div></div>
+                <div class="box box2"><div></div></div>
+                <div class="box box3"><div></div></div>
+                <div class="box box4"><div></div></div>
+                <div class="box box5"><div></div></div>
+                <div class="box box6"><div></div></div>
+                <div class="box box7"><div></div></div> 
+                <div class="ground"><div></div></div>
+            </div>
+            <div><h1>Loading...</h1></div>
+        </div>
+
         <!-- Navbar -->
         <section id="Navbar" class="navbar-container sticky">
             <nav class="navbar">
@@ -66,11 +82,13 @@
                     </div>
                     <div class="link-div fade fade-from-top-2">
                         <div class="flex-div">
-                            <a href="#about" class="link-button">
-                                <span>About Me</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
-                                </svg>
+                            <a href="#about" class="button aboutbutton">
+                                <div class="flex-div">
+                                    <span>About Me</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                                    </svg>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -148,10 +166,7 @@
             </div>
             <div class="details">
                 <div class="pfpdiv">
-                    <div>
-                        <div class="pfp fade fade-from-top-1">
-                            <img src="./assets/svg/avatar.svg" alt="">
-                        </div>
+                    <div class="container">
                         <div class="bg fade fade-from-top-2">
                             <svg id="blob" viewBox="0 0 900 900">
                                 <g transform="translate(429.4364486545468 490.8404783186162)">
@@ -168,9 +183,21 @@
                                 </g>
                             </svg>
                         </div>
+                        <div class="pfp fade fade-from-top-1">
+                            <img src="./assets/svg/avatar.svg" alt="">
+                        </div>
                         <div class="about-link-div">
                             <div class="flex-div fade fade-from-bottom-2">
-                                <a class="link-button" href="">Resume</a>
+                                <div class="flex-div">
+                                    <a class="button" href="">
+                                        <div>
+                                            <svg height=1rem width=1rem viewbox="0 0 48 48">
+                                                <path d="M11 40q-1.2 0-2.1-.9Q8 38.2 8 37v-7.15h3V37h26v-7.15h3V37q0 1.2-.9 2.1-.9.9-2.1.9Zm13-7.65-9.65-9.65 2.15-2.15 6 6V8h3v18.55l6-6 2.15 2.15Z"/>
+                                            </svg>
+                                            <span>Resume</span>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -200,7 +227,16 @@
                     </div>
                     <div class="about-link-div">
                         <div class="flex-div fade fade-from-bottom-2">
-                            <a class="link-button" href="">Resume</a>
+                            <div class="flex-div">
+                                <a class="button" href="">
+                                    <div>
+                                        <svg height=1rem width=1rem viewbox="0 0 48 48">
+                                            <path d="M11 40q-1.2 0-2.1-.9Q8 38.2 8 37v-7.15h3V37h26v-7.15h3V37q0 1.2-.9 2.1-.9.9-2.1.9Zm13-7.65-9.65-9.65 2.15-2.15 6 6V8h3v18.55l6-6 2.15 2.15Z"/>
+                                        </svg>
+                                        <span>Resume</span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -213,6 +249,7 @@
                 <h1>Skills</h1>
             </div>
             <div class="skills-div" id="skills-div">
+                <!-- Skills Are Added Here -->
             </div>
         </section>
 
@@ -222,6 +259,13 @@
             <h1>Projects(WIP)</h1>
             <div id="projects-display" class="projects-display">
                 <!-- Cards are added here -->
+                <div class="ViewALL fade" onclick="window.location = '/projects.html'">
+                    <img src="./assets/png/A.png" alt="showall"></img>
+                    <div>
+                        <span>View All</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m29.95 39.25-3.35-3.3 9.55-9.6h-33v-4.7h33L26.6 12l3.35-3.3L45.2 24Z"/></svg>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -243,7 +287,7 @@
                         <i class="icon"></i>
                         <h2 class="head">Q2: Who hosts the website?</h2>
                         <p class="accordian-content">
-                            To build your website you will need to choose a provider to host your website, this makes your website available online. Amazone AWS, Google Cloud, Bluehost, Heroku, etc. are some of the best hosting providers in the market. <br><br>
+                            To build your website you will need to choose a provider to host your website, this makes your website available online. Amazon AWS, Google Cloud, Bluehost, Heroku, etc. are some of the best hosting providers in the market. <br><br>
                             If you are not much aware of these hosting services, I recommend you the best suitable one for your requirements, or I can also help you with your existing provider if you already have one.
                         </p>
                     </li>
@@ -254,17 +298,8 @@
                         <div class="accordian-content">
                             Its very simple. <br>
                             Its a static site created using HTML, CSS(SCSS), JavaScript. <br>
-                            Javascript library used:
-                            <ul>
-                                <li><a class="bold-link" href="https://p5js.org/">P5.js</a></li>
-                                <li><a class="bold-link" href="http://snapsvg.io/">Snap.svg</a></li>
-                                <li><a class="bold-link" href="https://gijsroge.github.io/tilt.js/">Tilt.js</a></li>
-                            </ul>
-                            SVG creator:
-                            <ul>
-                                <li><a class="bold-link" href="https://app.haikei.app/"> haikei </a></li>
-                                <li><a class="bold-link" href="https://getavataaars.com/"> getavataaars </a></li>
-                            </ul>
+                            Javascript library used: <a class="bold-link" href="https://p5js.org/">P5.js</a>, <a class="bold-link" href="http://snapsvg.io/">Snap.svg</a>, <a class="bold-link" href="https://gijsroge.github.io/tilt.js/">Tilt.js</a><br>
+                            SVG creator: <a class="bold-link" href="https://app.haikei.app/">haikei</a>, <a class="bold-link" href="https://getavataaars.com/"> getavataaars </a><br>
                             <span>Form submisson using <a class="bold-link" href="https://formsubmit.co/">formsubmit.co</a></span> <br>
                             <span>Gradients and colors picked from <a class="bold-link" href="https://uigradients.com/">uiGradients</a></span> <br>
                             <span>Icons From: <a class="bold-link" href="https://icons8.com/icons/set/c%2B%2B">Icons8</a></span> <br>
@@ -286,18 +321,18 @@
             <form class="contact-form" action="https://formsubmit.co/8afaa7e2fd7dbc66db7a60921401fcca" method="POST">
                 <div class="contact-input">
                     <input class="input" name="name" type="text" id="input-name" placeholder=" " required />
-                    <label class="label" for="input-name">Enter Your Name</label>
+                    <label class="label" for="input-name">Name</label>
                 </div>
                 <div class="contact-input">
                     <input class="input" name="email" type="email" id="input-email" placeholder=" " required />
-                    <label class="label" for="input-email">Enter Your Email</label>
+                    <label class="label" for="input-email">Email</label>
                 </div>
                 <div class="contact-input">
                     <textarea class="input" name="message" id="input-message" rows="8" placeholder=" " required></textarea>
-                    <label class="label" for="input-message">Enter Your Message/Question</label>
+                    <label class="label" for="input-message">Message</label>
                 </div>
-                <button type="submit" class="form-submit">
-                    Submit
+                <button type="submit" class="button form-submit">
+                    <div>Submit</div>
                 </button>
                 <input type="hidden" name="_next" value="https://codebulletin.github.io/MyPortfolio?submit=done">
             </form>

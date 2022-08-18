@@ -8,7 +8,6 @@
         text-align: center;
         h1 {
             padding: 0;
-            margin: 2.5rem auto;
             font-size: 2.5rem;
             transition: all 0.25s;
             color: $form-header;
@@ -85,19 +84,29 @@
             }
         }
         .form-submit {
+            --var-max-depth: -8px;
+            --var-min-depth: -4px;
             font-size: 1.5rem;
             padding: 1rem 1.5rem;
             max-width: fit-content;
             margin: auto;
-            cursor: pointer;
             border-radius: 1rem;
-            border: none;
-            outline: none;
-            color: $form-bg;
-            background-color: $form-submit;
+            background-color: darken($form-submit, 5%);
             transition: all 0.25s;
             &:hover {
-                background-color: $form-submit-hover;
+                background-color: darken($form-submit-hover, 5%);
+                &:before {
+                    background-color: $form-submit-hover;
+                }
+            }
+            &:before {
+                border-radius: 1rem;
+                background-color: $form-submit;
+                transition: all 0.25s;
+            }
+            div {
+                transition: all 0.25s;
+                color: $form-bg;
             }
         }
     }
@@ -131,10 +140,18 @@
             }
         }
         .form-submit {
-            color: $form-bg-dark;
-            background-color: $form-submit-dark;
+            background-color: darken($form-submit-dark, 5%);
             &:hover {
-                background-color: $form-submit-hover-dark;
+                background-color: darken($form-submit-hover-dark, 5%);
+                &:before {
+                    background-color: $form-submit-hover-dark;
+                }
+            }
+            &:before {
+                background-color: $form-submit-dark;
+            }
+            div {
+                color: $form-bg-dark;
             }
         }
     }

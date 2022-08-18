@@ -21,11 +21,11 @@ function getRandomInt(max) {
 function setskills() {
     var html = "";
     var i = 0;
-    var colors = ['Advance', 'Expert', 'Intermediate']
+    var colors = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
     for (const [key, value] of Object.entries(Skills)) {
         html += `
         <div class='skill-div fade fade-from-right-4'>
-            <div class='skill-card ${colors[getRandomInt(3)]}'>
+            <div class='skill-card ${colors[getRandomInt(colors.length)]}'>
                 <a href = '${value[1]}' style='text-decoration: none;'>
                     <div class='bar'>
                     </div>
@@ -43,7 +43,8 @@ function setskills() {
 }
 
 function load_projects() {
-    let element = `<div class="card" data-tilt>
+    let element = `
+    <div class="card fade" data-tilt>
         <img src="${myImage}" alt="project-image" class="img"/>
         <div class="project-details">
             <h2>#EXAMPLE BLOCK</h2>
@@ -80,9 +81,11 @@ function load_projects() {
         </div>
     </div>`
     const a = document.getElementById('projects-display');
+    let elements = '';
     for(var i = 0; i < 8; i++) {
-        a.innerHTML += element;
+        elements += element;
     }
+    a.innerHTML = elements + a.innerHTML;
 }
 
 export function setdata() {

@@ -62,31 +62,48 @@
                 margin: auto;
                 display: flex;
                 margin-bottom: 1.66rem;
-                .link-button {
+                .aboutbutton {
+                    --var-max-depth: -10px;
+                    --var-min-depth: -5px;
+                    transform: translateY(5px);
                     display: flex;
                     align-items: center;
-
-                    padding: 12px 20px;
-
-                    font-size: 1.1;
-
-                    background-color: list.nth($home-link-main, 1);
-                    border-radius: 30px;
-                    gap: 5px;
-
-                    transition: background-color 0.25s, gap 0.25s, padding 0.25s;
-
-                    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
-
-
+                    font-size: 1.5rem;
+                    padding: 1rem 1.5rem;
+                    padding-right: 2.5rem;
+                    background-color: darken(list.nth($home-link-main, 1), 5%);
+                    border-radius: 0.5rem;
+                    transition: all 0.25s;
+                    column-gap: 0.5rem;
+                    text-decoration: none;
                     &:hover {
-                        background-color: list.nth($home-link-main, 2);
-                        gap: 12px;
-                        padding-right: 24px;
+                        background-color: darken(list.nth($home-link-main, 2), 5%);
+                        &:before {
+                            background-color: list.nth($home-link-main, 2);
+                        }
+                        div {
+                            svg {
+                                transform: translateX(1rem);
+                            }
+                        }
                     }
-
-                    span {
+                    &:before {
+                        background-color: list.nth($home-link-main, 1);
+                        border-radius: 0.5rem;
+                        transition: all 0.25s;
+                    }
+                    div {
                         font-weight: 600;
+                        color: white;
+                        transition: all 0.25s;
+                        align-items: center;
+                        justify-content: center;
+                        column-gap: 0.5rem;
+                        svg {
+                            width: 1.5rem;
+                            height: 1.5rem; 
+                            transition: all 0.25s;
+                        }
                     }
                 }
             }
@@ -99,7 +116,7 @@
                     padding-bottom: 8px;
                     padding-top: 8px;
                     border-radius: 50%;
-
+                    background-color: black;
                     transition: background-color 0.25s;
                     svg {
                         width: 24px;
@@ -121,13 +138,17 @@
 
             .link-button {
                 display: flex;
-                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
                 padding: 0;
                 border-radius: 50%;
                 background-color: #00000000;
                 img {
                     border-radius: 50%;
                     max-width: 300px;
+                    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+                    transition: all 0.25s;
+                    &:hover {
+                        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+                    }
                 }
             }
         }

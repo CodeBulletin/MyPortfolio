@@ -8,6 +8,10 @@
             padding-top: 1.1rem;
             border-top: 2px dotted $faq-paragraph;
             opacity: 0;
+            .head {
+                font-size: 1.5rem;
+                margin-right: 3rem;
+            }
             .accordian-content {
                 color: $faq-paragraph;
                 font-size: 1rem;
@@ -42,7 +46,7 @@
                     width: 3px;
                     height: 9px;
                     transition: all 0.25s;
-                    scale: 2;
+                    scale: 1;
                 }
                 &:before {
                     transform: translate(-2.5px, -0.5px) rotate(45deg);
@@ -121,5 +125,22 @@
     100% {
         transform-origin: top center;
         transform: rotateX(0deg);
+    }
+}
+
+@include breakpoint(850px) {
+    .accordian {
+        .accordian-list {
+            .accordian-item {
+                .head {
+                    font-size: 2rem;
+                }
+                .icon {
+                    &:before, &:after {
+                        scale: 2;
+                    }
+                }
+            }
+        }
     }
 }

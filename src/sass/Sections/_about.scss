@@ -2,19 +2,15 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: $about-bg;
-
     transition: background-color 0.25s, color 0.25s;
-
     margin: 0;
+    padding-bottom: 3rem;
 
     .head {
         display: flex;
         justify-self: flex-start !important;
         margin: 1.5rem auto;
-
         h1 {
             font-size: 2.5rem;
             span {
@@ -26,6 +22,8 @@
     }
 
     .details {
+        align-self: center;
+        justify-self: center;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -39,7 +37,7 @@
                 display: none;
             }
 
-            div {
+            .container {
                 position: relative;
                 width: fit-content;
                 display: flex;
@@ -106,11 +104,42 @@
 
 .about-link-div {
     margin: 1rem auto;
-    .link-button {
-        border-radius: 1rem;
-        background-color: $about-link;
+    .button {
+        --var-max-depth: -8px;
+        --var-min-depth: -4px;
+        font-size: 1.2rem;
+        padding: 0.8rem 1.2rem;
+        text-decoration: none;
+        max-width: fit-content;
+        margin: auto;
+        border-radius: 0.5rem;
+        background-color: darken($about-link, 5%);
+        transition: all 0.25s;
         &:hover {
-            background-color: $about-link-hover;
+            background-color: darken($about-link-hover, 5%);
+            &:before {
+                background-color: $about-link-hover;
+            }
+        }
+        &:before {
+            border-radius: 0.5rem;
+            background-color: $about-link;
+            transition: all 0.25s;
+        }
+        div {
+            transition: all 0.25s;
+            color: $about-bg;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            column-gap: 0.5rem;
+            svg {
+                fill: $about-bg;
+                width: 1.5rem;
+                height: 1.5rem;
+                transition: all 0.25s;
+            }
         }
     }
 }
@@ -176,16 +205,25 @@
 
     .about-link-div {
         margin: 1rem auto;
-        .link-button {
-            border-radius: 1rem;
-            background-color: $about-link-dark;
+        .button {
+            background-color: darken($about-link-dark, 5%);
             &:hover {
-                background-color: $about-link-hover-dark;
+                background-color: darken($about-link-hover-dark, 5%);
+                &:before {
+                    background-color: $about-link-hover-dark;
+                }
+            }
+            &:before {
+                background-color: $about-link-dark;
+            }
+            div {
+                color: $about-bg-dark;
+                svg {
+                    fill: $about-bg-dark;
+                }
             }
         }
     }
-
-
     #blob1 {
         fill: $about-blob-dark;
     }    
