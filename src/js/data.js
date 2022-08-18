@@ -116,4 +116,6 @@ function get_nav_height() {
     return nav_height;
 }
 
-export {Data, Skills, sections, nav_links, body, checkbox, navbar, home_gif_dark, home_gif_light, set_nav_height, get_nav_height}
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+export {Data, Skills, sections, nav_links, body, checkbox, navbar, home_gif_dark, home_gif_light, set_nav_height, get_nav_height, sleep}

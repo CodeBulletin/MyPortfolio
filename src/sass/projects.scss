@@ -3,19 +3,12 @@
 @import 'variables';
 @import 'breakpoints';
 @import 'fade';
-@import 'components/switch';
-@import 'components/button';
-@import 'components/skillcard';
-@import 'components/accordian';
+
 @import 'components/card';
+@import 'components/switch';
 
 @import 'Sections/navbar';
-@import 'Sections/home';
-@import 'Sections/about';
-@import 'Sections/skills';
 @import 'Sections/projects';
-@import 'Sections/faq';
-@import 'Sections/contactform';
 @import 'Sections/footer';
 
 .sticky {
@@ -79,6 +72,15 @@
         color: $pink;
         &:hover {
             color: $blue;
+        }
+    }
+}
+
+.ViewALL {
+    div {
+        flex-direction: row-reverse;
+        svg {
+            transform: rotateZ(180deg);
         }
     }
 }

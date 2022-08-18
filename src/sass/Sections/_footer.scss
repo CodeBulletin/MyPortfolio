@@ -4,6 +4,8 @@
     flex-direction: column;
 
     background-color: $footer-bg;
+    transition: all 0.25s;
+
     .footer-social {
         .footer-links {
             display: flex;
@@ -120,4 +122,8 @@
             }
         }
     }
+}
+
+.footer * {
+    transition: all 0.25s;
 }

@@ -4,8 +4,9 @@ const path = require('path');
 module.exports = {
     mode:"development",
     entry: {
+        vendor: './src/js/vendor.js',
         main: './src/js/index.js',
-        vendor: './src/js/vendor.js'
+        projectpage: './src/js/projectpage.js',
     },
     module: {
         rules: [
@@ -35,7 +36,14 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: ".\\src\\index.html"
+            template: ".\\src\\index.html",
+            filename: "index.html",
+            chunks: ['main', 'vendor']
+        }),
+        new HtmlWebpackPlugin({
+            template: ".\\src\\projects.html",
+            filename: "projects.html",
+            chunks: ['projectpage', 'vendor']
         }),
     ],
 };

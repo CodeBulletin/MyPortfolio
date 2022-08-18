@@ -1,8 +1,7 @@
-import { set_nav_height, get_nav_height, navbar } from "./data";
+import {get_nav_height} from "./data";
 
 export function resize_sections() {
     var height = window.innerHeight;
-    set_nav_height(navbar.offsetHeight);
 
     var height_left = height - get_nav_height();
     var home = document.getElementById('home');

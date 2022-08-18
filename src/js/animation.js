@@ -1,8 +1,8 @@
-import { Data } from "./data";
+import { Data, sleep } from "./data";
 import "snapsvg-cjs";
 
 const span = document.getElementById('specialization');
-export const sleep = ms => new Promise(r => setTimeout(r, ms));
+
 var specialization = Data.Specialization;
 const pointer = "|"
 
