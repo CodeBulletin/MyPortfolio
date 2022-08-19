@@ -98,6 +98,54 @@ const Skills = {
     "Julia": [Julia, 'https://julialang.org/'],
 }
 
+
+
+var img = require("../assets/png/A.png");
+
+const Projects = [
+    {
+        title: "Example Site",
+        img1: img,
+        img2: img,
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum",
+        code: "",
+        view: "",
+        download: null
+    }, {
+        title: "Example Site",
+        img1: img,
+        img2: img,
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum",
+        code: "",
+        view: "",
+        download: null
+    }, {
+        title: "Example Site",
+        img1: img,
+        img2: img,
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum",
+        code: "",
+        view: "",
+        download: null
+    }, {
+        title: "Example Site",
+        img1: img,
+        img2: img,
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum",
+        code: "",
+        view: "",
+        download: null
+    }, {
+        title: "Example Site",
+        img1: img,
+        img2: img,
+        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum",
+        code: "",
+        view: "",
+        download: null
+    }
+]
+
 const sections = Array.from(document.getElementsByTagName('section'));
 const nav_links = Array.from(document.getElementsByClassName('nav-link'));
 const body = document.getElementById('body');
@@ -105,6 +153,7 @@ const checkbox = document.getElementById('dark_mode_check_box');
 const navbar = document.getElementById('Navbar');
 const home_gif_dark = document.getElementById('home_gif1');
 const home_gif_light = document.getElementById('home_gif2');
+const PAGE = document.getElementById('html');
 
 var nav_height;
 
@@ -118,4 +167,5 @@ function get_nav_height() {
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-export {Data, Skills, sections, nav_links, body, checkbox, navbar, home_gif_dark, home_gif_light, set_nav_height, get_nav_height, sleep}
+
+export {Data, Skills, sections, nav_links, body, checkbox, navbar, home_gif_dark, home_gif_light, PAGE, Projects, set_nav_height, get_nav_height, sleep}

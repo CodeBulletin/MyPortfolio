@@ -36,8 +36,8 @@ async function on_load() {
         body.classList.remove('dark');
     }
 
-    
     set_nav_height(navbar.offsetHeight);
+    PAGE.style.scrollPaddingTop = (navbar.offsetHeight) + 'px';
     load_projects(-1);
     await sleep(3000);
     document.getElementById('loading-page').style.display = 'none';

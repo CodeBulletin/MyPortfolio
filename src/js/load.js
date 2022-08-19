@@ -1,6 +1,4 @@
-import { Data, Skills } from "./data.js";
-
-var img = require("../assets/png/A.png");
+import { Data, Skills, Projects } from "./data.js";
 
 function calcAge(dateString) {
     var birthday = +new Date(dateString);
@@ -42,7 +40,7 @@ function setskills() {
     document.getElementById("skills-div").innerHTML = html;
 }
 
-function makeCard(img_src, head, paragraph, view, download, code) {
+function makeCard(img_src1, img_src2, head, paragraph, view, download, code) {
     let viewelement = `<a href="${view}">
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width=1rem height=1rem viewBox="0 0 16 16">
@@ -72,7 +70,8 @@ function makeCard(img_src, head, paragraph, view, download, code) {
     </a>`
 
     return `<div class="card fade">
-        <img src="${img_src}" alt="project-image" class="img"/>
+        <img src="${img_src1}" alt="project-image" class="img"/>
+        <img src="${img_src2}" alt="project-image" class="img"/>
         <div class="project-details">
             <h2>${head}</h2>
             <div class="details">
@@ -88,11 +87,11 @@ function makeCard(img_src, head, paragraph, view, download, code) {
 }
 
 export function load_projects(num) {
-    if(num == -1) num = 8;
+    if(num == -1) num = Projects.length;
     const a = document.getElementById('projects-display');
     let elements = '';
     for(var i = 0; i < num; i++) {
-        elements += makeCard(img, "Example Project", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum", './index.html', null, './index.html');
+        elements += makeCard(Projects[i].img1, Projects[i].img2, Projects[i].title, Projects[i].details, Projects[i].view, Projects[i].download, Projects[i].code);
     }
     a.innerHTML = elements + a.innerHTML;
 }

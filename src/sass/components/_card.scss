@@ -3,9 +3,14 @@
     position: relative;
     overflow: hidden;
     border-radius: 5px;
+    transition: all 0.25s;
     .img {
-        width: 418.5px;
-        height: 243px;
+        &:nth-of-type(1) {
+            display: none;
+        }
+        &:nth-of-type(2) {
+            display: none;
+        }
     }
     .project-details {
         position: absolute;
@@ -14,11 +19,11 @@
         background-color: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(1px);
         h2 {
-            background-color: $blue;
+            background-color: $p-head;
             padding: 0.8rem 0;
             text-align: center;
             margin: 0px;
-            color: black;
+            color: $p-head-text;
         }
         .details {
             transition: max-height 0.5s ease-in-out;
@@ -39,11 +44,11 @@
                 a {
                     position: relative;
                     text-decoration: none;
-                    background-color: darken($pink, 10%);
+                    background-color: darken($p-button, 10%);
                     font-size: 1.2rem;
                     padding: 0.7rem;
                     border-radius: 5px;
-                    color: black;
+                    color: $p-button-text;
                     transition: all 0.25s;
                     z-index: 0;
                     div {
@@ -53,7 +58,7 @@
                         transform: translateY(-6px);
                         transition: all 0.25s;
                         svg {
-                            fill: black;
+                            fill: $p-button-text;
                             width: 1.2rem;
                             height: 1.2rem;
                         }
@@ -66,16 +71,16 @@
                         height: 100%;
                         width: 100%;
                         transform: translateY(-6px);
-                        background-color: $pink;
+                        background-color: $p-button;
                         border-radius: 5px;
                         z-index: -1;
                         transition: all 0.25s;
                     }
 
                     &:hover {
-                        background-color: darken($pink, 5%);
+                        background-color: darken($p-button, 5%);
                         &:after {
-                            background-color: lighten($pink, 5%);
+                            background-color: lighten($p-button, 5%);
                         }
                     }
 
@@ -93,5 +98,42 @@
     }
     &:hover .project-details .details {
         max-height: 243px;
+    }
+}
+
+.card * {
+    transition: all 0.25s;
+}
+
+.dark {
+    .card {
+        .project-details {
+            h2 {
+                background-color: $p-head-dark;
+                color: $p-head-text-dark;
+            }
+            .details{
+                .links{ 
+                    a {
+                        background-color: darken($p-button-dark, 10%);
+                        color: $p-button-text-dark;
+                        div {
+                            svg {
+                                fill: $p-button-text-dark;
+                            }
+                        }
+                        &:after {
+                            background-color: $p-button-dark;
+                        }
+                        &:hover {
+                            background-color: darken($p-button-dark, 5%);
+                            &:after {
+                                background-color: lighten($p-button-dark, 5%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -71,7 +71,7 @@
                     font-size: 1.5rem;
                     padding: 1rem 1.5rem;
                     padding-right: 2.5rem;
-                    background-color: darken(list.nth($home-link-main, 1), 5%);
+                    background-color: darken(list.nth($home-link-main, 1), 10%);
                     border-radius: 0.5rem;
                     transition: all 0.25s;
                     column-gap: 0.5rem;
@@ -170,14 +170,22 @@
         }
     }
     .link-div {
-        .link-button {
-            background-color: list.nth($home-link-main-dark, 1) !important;
-            color: black;
-            svg {
-                fill: black;
+        .aboutbutton {
+            background-color: darken(list.nth($home-link-main-dark, 1), 20%) !important;
+            &:before {
+                background-color: list.nth($home-link-main-dark, 1) !important;
+            }
+            div {
+                color: black !important;
+                svg {
+                    fill: black !important;
+                }
             }
             &:hover {
-                background-color: list.nth($home-link-main-dark, 2) !important;
+                background-color: darken(list.nth($home-link-main-dark, 2), 20%) !important;
+                &:before {
+                    background-color: list.nth($home-link-main-dark, 2) !important;
+                }
             }
         }
     }

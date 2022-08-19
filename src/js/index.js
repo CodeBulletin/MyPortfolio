@@ -4,7 +4,7 @@ import { accordian } from './accordian';
 import { setdata } from "./load";
 import { resize_sections } from "./resize"
 import { scrollfn } from "./scroll"
-import { body, checkbox, home_gif_dark, home_gif_light, sleep, set_nav_height, navbar } from "./data"
+import { body, checkbox, home_gif_dark, home_gif_light, sleep, set_nav_height, navbar, PAGE } from "./data"
 import { animation } from "./animation"
 import { Observe } from "./observer";
 
@@ -45,6 +45,7 @@ async function on_load() {
     }
     
     set_nav_height(navbar.offsetHeight);
+    PAGE.style.scrollPaddingTop = (navbar.offsetHeight) + 'px';
     setdata();
     accordian();
     resize_sections();
