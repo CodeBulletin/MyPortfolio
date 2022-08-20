@@ -1,6 +1,6 @@
 import "../sass/projects.scss"
 
-import {sleep, checkbox, body, set_nav_height, navbar} from './data.js'
+import {sleep, checkbox, body, set_nav_height, navbar, PAGE} from './data.js'
 import {load_projects} from './load'
 import {Observe} from "./observer"
 

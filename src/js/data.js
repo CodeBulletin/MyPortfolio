@@ -128,21 +128,69 @@ const Projects = [
         view: "",
         download: null
     }, {
-        title: "Example Site",
-        img1: img,
-        img2: img,
-        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum",
-        code: "",
-        view: "",
+        title: "Snake AI",
+        img1: require("../assets/png/projects/SnakeAI-S.png"),
+        img2: require("../assets/png/projects/SnakeAI-L.png"),
+        details: "Snake game solver made using c++ and sfml<br> slover types: random, bfs, dfs, A*, player, hamiltonian",
+        code: "https://github.com/CodeBulletin/AI-Snake",
+        view: null,
+        download: "https://github.com/CodeBulletin/AI-Snake/releases/download/v1.0.0/Release.zip"
+    }, {
+        title: "MNCA Simulator",
+        img1: require("../assets/png/projects/MNCA-S.png"),
+        img2: require("../assets/png/projects/MNCA-L.png"),
+        details: "Multi neighbour cellular automaton simulator accelerated using shaders <br> Created using: C++, SFML, GLSL",
+        code: "https://github.com/CodeBulletin/Multi-Neighbourhood-CA",
+        view: null,
+        download: "https://github.com/CodeBulletin/Multi-Neighbourhood-CA/releases/download/Main/MNCA.zip"
+    }, {
+        title: "Maze.EXE",
+        img1: require("../assets/png/projects/Maze-S.png"),
+        img2: require("../assets/png/projects/Maze-L.png"),
+        details: "Maze Generation/Solving/Game Visualization <br> created using: SFML, C++",
+        code: "https://github.com/CodeBulletin/Maze.Exe",
+        view: "https://www.youtube.com/watch?v=n_ZV4yC-eT4&t=173s",
+        download: 'https://github.com/CodeBulletin/Maze.Exe/releases/download/Maze.exe/Release.zip'
+    }, {
+        title: "Electrostatic Simulator",
+        img1: require("../assets/png/projects/ES-S.png"),
+        img2: require("../assets/png/projects/ES-L.png"),
+        details: "Electro Static/Dynamic/voltage/electric field simulator accelerated using shaders<br> created using: SFML, C++, GLSL",
+        code: "https://github.com/CodeBulletin/Electrostatic-Simulation",
+        view: null,
+        download: "https://github.com/CodeBulletin/Electrostatic-Simulation/releases/download/v1.0.0/Release.zip"
+    }, {
+        title: "Wave Simulator",
+        img1: require("../assets/png/projects/SoundWave-S.png"),
+        img2: require("../assets/png/projects/SoundWave-L.png"),
+        details: "Wave simulator And interference pattern generator accelerated using shaders<br> created using: SFML, C++, GLSL",
+        code: "https://github.com/CodeBulletin/Sound-Wave-Simulation",
+        view: null,
         download: null
     }, {
-        title: "Example Site",
-        img1: img,
-        img2: img,
-        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum",
-        code: "",
-        view: "",
-        download: null
+        title: "Tic Tac Toe AI",
+        img1: require("../assets/png/projects/TicTacToe-S.png"),
+        img2: require("../assets/png/projects/TicTacToe-L.png"),
+        details: "Tic Tac Toe Min Max AI <br> created using: SFML, C++",
+        code: "https://github.com/CodeBulletin/Tic-Tac-Toe-AI",
+        view: null,
+        download: 'https://github.com/CodeBulletin/Tic-Tac-Toe-AI/releases/download/v1.0.0/Release.zip'
+    }, {
+        title: "Cellular Automata 1D",
+        img1: require("../assets/png/projects/CA1D-S.png"),
+        img2: require("../assets/png/projects/CA1D-L.png"),
+        details: "Cellular Automata 1D Simulation <br> created using: SFML, C++",
+        code: "https://github.com/CodeBulletin/CellularAutomata/tree/master",
+        view: null,
+        download: "https://github.com/CodeBulletin/CellularAutomata/releases/download/v1.0.0/Release.zip"
+    }, {
+        title: "Game Of Life",
+        img1: require("../assets/png/projects/GOL.png"),
+        img2: require("../assets/png/projects/GOL.png"),
+        details: "Game Of Life Simulation accelerated using shaders<br> created using: SFML, C++, GLSL",
+        code: "https://github.com/CodeBulletin/CellularAutomata2D",
+        view: null,
+        download: "https://github.com/CodeBulletin/CellularAutomata2D/releases/download/v1/Release.zip"
     }
 ]
 
