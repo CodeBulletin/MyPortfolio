@@ -104,30 +104,6 @@ var img = require("../assets/png/A.png");
 
 const Projects = [
     {
-        title: "Example Site",
-        img1: img,
-        img2: img,
-        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum",
-        code: "",
-        view: "",
-        download: null
-    }, {
-        title: "Example Site",
-        img1: img,
-        img2: img,
-        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum",
-        code: "",
-        view: "",
-        download: null
-    }, {
-        title: "Example Site",
-        img1: img,
-        img2: img,
-        details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil esse autem. Neque earum",
-        code: "",
-        view: "",
-        download: null
-    }, {
         title: "Snake AI",
         img1: require("../assets/png/projects/SnakeAI-S.png"),
         img2: require("../assets/png/projects/SnakeAI-L.png"),
