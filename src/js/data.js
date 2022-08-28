@@ -136,6 +136,14 @@ const Projects = [
         view: null,
         download: "https://github.com/CodeBulletin/Electrostatic-Simulation/releases/download/v1.0.0/Release.zip"
     }, {
+        title: "Lissajous Curve Simulator",
+        img1: require("../assets/png/projects/LCURVE-S.png"),
+        img2: require("../assets/png/projects/LCURVE-L.png"),
+        details: "Lissajous Curve Simulator <br> created using: SFML, C++",
+        code: "https://github.com/CodeBulletin/Lissajous-Curves",
+        view: null,
+        download: "https://github.com/CodeBulletin/Lissajous-Curves/releases/download/v1/Release.zip"
+    }, {
         title: "Wave Simulator",
         img1: require("../assets/png/projects/SoundWave-S.png"),
         img2: require("../assets/png/projects/SoundWave-L.png"),
@@ -167,6 +175,22 @@ const Projects = [
         code: "https://github.com/CodeBulletin/CellularAutomata2D",
         view: null,
         download: "https://github.com/CodeBulletin/CellularAutomata2D/releases/download/v1/Release.zip"
+    }, {
+        title: "Mandelbrot Visualization",
+        img1: require("../assets/png/projects/MB-S.png"),
+        img2: require("../assets/png/projects/MB-L.png"),
+        details: "Mandelbrot Visualization accelerated using shaders<br> created using: SFML, C++, GLSL",
+        code: "https://github.com/CodeBulletin/Mandelbrot-GPU",
+        view: null,
+        download: "https://github.com/CodeBulletin/Mandelbrot-GPU/releases/download/v1/Release.zip"
+    },  {
+        title: "Ascii Video Player",
+        img1: require("../assets/png/projects/Ascii-S.png"),
+        img2: require("../assets/png/projects/Ascii-L.png"),
+        details: "Ascii Video Player that converts video to ascii art style in real time<br> created using: OpenCV, SFML Aduio, C++",
+        code: "https://github.com/CodeBulletin/OpenCV_VideoToAscii",
+        view: null,
+        download: "https://github.com/CodeBulletin/OpenCV_VideoToAscii/releases/download/v1.1/release.zip"
     }
 ]
 
