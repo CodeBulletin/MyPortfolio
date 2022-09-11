@@ -31,9 +31,8 @@
             position: relative;
             margin: 1rem;
             overflow: hidden;
-            border: 4px solid white;
+            border: 4px solid black;
             border-radius: 5px;
-            border-style: double;
             cursor: pointer;
             img {
                 display: flex;
@@ -55,7 +54,10 @@
                 font-size: 2rem;
                 column-gap: 0.75rem;
                 svg {
-                    fill: white;
+                    fill: black;
+                }
+                span {
+                    color: black;
                 }
             }
         }
@@ -64,6 +66,19 @@
 
 .dark .projects {
     background-color: lighten($very-dark-gray, 5%);
+    .projects-display {
+        .ViewALL {
+            border: 4px double white;
+            div {
+                svg {
+                    fill: white;
+                }
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
 @include breakpoint(500px) {

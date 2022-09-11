@@ -31,6 +31,12 @@ module.exports = {
                 generator: {
                     filename: "assets/svg/[name].[hash].[ext]"
                 }
+            }, {
+                test: /\.(pdf)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: "assets/pdf/[name].[hash].[ext]"
+                }
             }
         ]
     },

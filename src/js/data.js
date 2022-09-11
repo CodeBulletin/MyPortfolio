@@ -98,10 +98,6 @@ const Skills = {
     "Julia": [Julia, 'https://julialang.org/'],
 }
 
-
-
-var img = require("../assets/png/A.png");
-
 const Projects = [
     {
         title: "Snake AI",
@@ -201,7 +197,10 @@ const checkbox = document.getElementById('dark_mode_check_box');
 const navbar = document.getElementById('Navbar');
 const home_gif_dark = document.getElementById('home_gif1');
 const home_gif_light = document.getElementById('home_gif2');
+const homep_dark = document.getElementById('homep_dark');
+const homep_light = document.getElementById('homep_light');
 const PAGE = document.getElementById('html');
+const resume_buttons = document.getElementsByClassName('Resume');
 
 var nav_height;
 
@@ -215,5 +214,7 @@ function get_nav_height() {
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+const resume = require("../assets/pdf/Resume.pdf")
 
-export {Data, Skills, sections, nav_links, body, checkbox, navbar, home_gif_dark, home_gif_light, PAGE, Projects, set_nav_height, get_nav_height, sleep}
+
+export {Data, Skills, sections, nav_links, body, checkbox, navbar, home_gif_dark, home_gif_light, homep_dark, homep_light, PAGE, Projects, resume_buttons, resume, set_nav_height, get_nav_height, sleep}

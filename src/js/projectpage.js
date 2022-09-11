@@ -1,6 +1,6 @@
 import "../sass/projects.scss"
 
-import {sleep, checkbox, body, set_nav_height, navbar, PAGE} from './data.js'
+import {sleep, checkbox, body, set_nav_height, navbar, PAGE, homep_dark, homep_light} from './data.js'
 import {load_projects} from './load'
 import {Observe} from "./observer"
 
@@ -9,10 +9,14 @@ document.getElementById('dark_mode_check_box').onchange = () => {
     if (body.classList.contains('dark')) { 
         body.classList.remove('dark');
         localStorage.setItem('dark_mode', "no");
+        document.getElementById("homep_dark").style.display = 'none';
+        document.getElementById("homep_light").style.display = 'block';
     }
     else {
         body.classList.add('dark');
         localStorage.setItem('dark_mode', "yes");
+        document.getElementById("homep_dark").style.display = 'block';
+        document.getElementById("homep_light").style.display = 'none';
     }
 }
 
@@ -32,7 +36,9 @@ async function on_load() {
     }
     if (localStorage.getItem('dark_mode') === "yes") {
         checkbox.checked = true;
+        homep_light.style.display = "none";
     } else {
+        homep_dark.style.display = "none";
         body.classList.remove('dark');
     }
 

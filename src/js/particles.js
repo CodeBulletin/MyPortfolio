@@ -60,6 +60,8 @@ var bg;
 var bg_dark;
 var transition = 100;
 
+var enabled = true;
+
 const ballRadius = [2, 6];
 const minSpeed = 2;
 const maxSpeed = 5;
@@ -140,7 +142,21 @@ const sketch = (s) => {
         s.resizeCanvas(doc.clientWidth, doc.clientHeight);
         maxDistancePx = (s.width+s.height) / 12;
         colAtMaxpx = maxDistancePx / 3;
-    })).observe(doc)
+    })).observe(doc);
+
+    (new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            if (!enabled) {
+                enabled = true;
+                s.loop();
+            }
+        } else {
+            if (enabled) {
+                enabled = false;
+                s.noLoop();
+            }
+        }
+    })).observe(doc);
 }
 
 let p5sketch = new p5(sketch, doc)
