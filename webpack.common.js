@@ -42,12 +42,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: ".\\src\\index.html",
+            template: "./src/index.html",
             filename: "index.html",
             chunks: ['main', 'vendor']
         }),
         new HtmlWebpackPlugin({
-            template: ".\\src\\projects.html",
+            template: "./src/projects.html",
             filename: "projects.html",
             chunks: ['projectpage', 'vendor']
         }),

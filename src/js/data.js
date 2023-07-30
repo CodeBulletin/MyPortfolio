@@ -21,8 +21,8 @@ const CSS = require('../assets/svg/css.svg')
 const PHP = require('../assets/svg/php.svg')
 const SASS = require('../assets/svg/sass.svg')
 const Tensorflow = require('../assets/svg/Tensorflow.svg')
-const KERAS = require('../assets/svg/keras.svg')
-const Numpy = require('../assets/svg/Numpy.svg')
+const KERAS = require('../assets/svg/Keras.svg')
+const Numpy = require('../assets/svg/numpy.svg')
 const Matplotlib = require('../assets/svg/Matplotlib.svg')
 const pandas = require('../assets/svg/pandas.svg')
 const js = require('../assets/svg/js.svg')
@@ -38,20 +38,18 @@ const Scikit = require('../assets/svg/Scikit.svg')
 const Tailwind = require('../assets/svg/tailwindcss.svg')
 const Bootstrap = require('../assets/svg/bootstrap.svg')
 const React = require('../assets/svg/react.svg')
-const ReactNative = require('../assets/svg/react-native.svg')
 const Redux = require('../assets/svg/redux.svg')
 const node = require('../assets/svg/nodejs.svg')
 const express = require('../assets/svg/expressjs.svg')
-const MongoDB = require('../assets/svg/MongoDB.svg')
-const Django = require('../assets/svg/Django.svg')
+const MongoDB = require('../assets/svg/mongodb.svg')
+const Django = require('../assets/svg/django.svg')
 const Vulkan = require('../assets/svg/Vulkan.svg')
 const Markdown = require('../assets/svg/Markdown.svg')
-const Bash = require('../assets/svg/Bash.svg')
+const Bash = require('../assets/svg/bash.svg')
 const Fortran = require('../assets/svg/Fortran.svg')
-const Typescript = require('../assets/svg/Typescript.svg')
-const Redis = require('../assets/svg/Redis.svg')
-const R = require('../assets/svg/R.svg')
-const Julia = require('../assets/svg/Julia.svg')
+const Typescript = require('../assets/svg/typescript.svg')
+const Redis = require('../assets/svg/redis.svg')
+const Julia = require('../assets/svg/julia.svg')
 
 const Skills = {
     "C++": [Cpp, 'https://en.wikipedia.org/wiki/C%2B%2B'],
@@ -81,7 +79,6 @@ const Skills = {
     "Tailwind": [Tailwind, 'https://tailwindcss.com/'],
     "Bootstrap": [Bootstrap, 'https://getbootstrap.com/'],
     "React": [React, 'https://reactjs.org/'],
-    "React Native": [ReactNative, 'https://reactnative.dev/'],
     "Redux": [Redux, 'https://redux.js.org/'],
     "Nodejs": [node, 'https://nodejs.org/en/'],
     "Express": [express, 'https://expressjs.com/'],
@@ -94,7 +91,6 @@ const Skills = {
     "Fortran": [Fortran, 'https://fortran-lang.org/'],
     "Typescript": [Typescript, 'https://www.typescriptlang.org/'],
     "Redis": [Redis, 'https://redis.io/'],
-    "R": [R, 'https://www.r-project.org/about.html'],
     "Julia": [Julia, 'https://julialang.org/'],
 }
 
@@ -102,7 +98,7 @@ const Projects = [
     {
         title: "Snake AI",
         img1: require("../assets/png/projects/SnakeAI-S.png"),
-        img2: require("../assets/png/projects/SnakeAI-L.png"),
+        img2: require("../assets/png/projects/SnakeAI-l.png"),
         details: "Snake game solver made using c++ and sfml<br> slover types: random, bfs, dfs, A*, player, hamiltonian",
         code: "https://github.com/CodeBulletin/AI-Snake",
         view: null,
@@ -110,7 +106,7 @@ const Projects = [
     }, {
         title: "MNCA Simulator",
         img1: require("../assets/png/projects/MNCA-S.png"),
-        img2: require("../assets/png/projects/MNCA-L.png"),
+        img2: require("../assets/png/projects/MNCA-l.png"),
         details: "Multi neighbour cellular automaton simulator accelerated using shaders <br> Created using: C++, SFML, GLSL",
         code: "https://github.com/CodeBulletin/Multi-Neighbourhood-CA",
         view: null,
@@ -118,7 +114,7 @@ const Projects = [
     }, {
         title: "Maze.EXE",
         img1: require("../assets/png/projects/Maze-S.png"),
-        img2: require("../assets/png/projects/Maze-L.png"),
+        img2: require("../assets/png/projects/Maze-l.png"),
         details: "Maze Generation/Solving/Game Visualization <br> created using: SFML, C++",
         code: "https://github.com/CodeBulletin/Maze.Exe",
         view: "https://www.youtube.com/watch?v=n_ZV4yC-eT4&t=173s",
@@ -126,7 +122,7 @@ const Projects = [
     }, {
         title: "Electrostatic Simulator",
         img1: require("../assets/png/projects/ES-S.png"),
-        img2: require("../assets/png/projects/ES-L.png"),
+        img2: require("../assets/png/projects/ES-l.png"),
         details: "Electro Static/Dynamic/voltage/electric field simulator accelerated using shaders<br> created using: SFML, C++, GLSL",
         code: "https://github.com/CodeBulletin/Electrostatic-Simulation",
         view: null,
@@ -134,7 +130,7 @@ const Projects = [
     }, {
         title: "Lissajous Curve Simulator",
         img1: require("../assets/png/projects/LCURVE-S.png"),
-        img2: require("../assets/png/projects/LCURVE-L.png"),
+        img2: require("../assets/png/projects/LCURVE-l.png"),
         details: "Lissajous Curve Simulator <br> created using: SFML, C++",
         code: "https://github.com/CodeBulletin/Lissajous-Curves",
         view: null,
@@ -142,7 +138,7 @@ const Projects = [
     }, {
         title: "Wave Simulator",
         img1: require("../assets/png/projects/SoundWave-S.png"),
-        img2: require("../assets/png/projects/SoundWave-L.png"),
+        img2: require("../assets/png/projects/SoundWave-l.png"),
         details: "Wave simulator And interference pattern generator accelerated using shaders<br> created using: SFML, C++, GLSL",
         code: "https://github.com/CodeBulletin/Sound-Wave-Simulation",
         view: null,
@@ -158,7 +154,7 @@ const Projects = [
     }, {
         title: "Cellular Automata 1D",
         img1: require("../assets/png/projects/CA1D-S.png"),
-        img2: require("../assets/png/projects/CA1D-L.png"),
+        img2: require("../assets/png/projects/CA1D-l.png"),
         details: "Cellular Automata 1D Simulation <br> created using: SFML, C++",
         code: "https://github.com/CodeBulletin/CellularAutomata/tree/master",
         view: null,
@@ -174,7 +170,7 @@ const Projects = [
     }, {
         title: "Mandelbrot Visualization",
         img1: require("../assets/png/projects/MB-S.png"),
-        img2: require("../assets/png/projects/MB-L.png"),
+        img2: require("../assets/png/projects/MB-l.png"),
         details: "Mandelbrot Visualization accelerated using shaders<br> created using: SFML, C++, GLSL",
         code: "https://github.com/CodeBulletin/Mandelbrot-GPU",
         view: null,
@@ -182,11 +178,115 @@ const Projects = [
     },  {
         title: "Ascii Video Player",
         img1: require("../assets/png/projects/Ascii-S.png"),
-        img2: require("../assets/png/projects/Ascii-L.png"),
+        img2: require("../assets/png/projects/Ascii-l.png"),
         details: "Ascii Video Player that converts video to ascii art style in real time<br> created using: OpenCV, SFML Aduio, C++",
         code: "https://github.com/CodeBulletin/OpenCV_VideoToAscii",
         view: null,
         download: "https://github.com/CodeBulletin/OpenCV_VideoToAscii/releases/download/v1.1/release.zip"
+    }, {
+        title: "Covid Analyzer",
+        img1: require("../assets/png/projects/Covid.png"),
+        img2: require("../assets/png/projects/Covid.png"),
+        details: "Covid Analyzer that analyzes covid data and displays it in a graph<br> created using: Python, Scikit-learn, plotly",
+        code: "https://github.com/CodeBulletin/CovidAnalyzer",
+        view: null,
+        download: null
+    }, {
+        title: "Zero Player Pong",
+        img1: require("../assets/png/projects/PingPong.png"),
+        img2: require("../assets/png/projects/PingPong.png"),
+        details: "Zero Player Pong Game that uses genetic algorithm to train the AI<br> created using: Processing",
+        code: "https://github.com/CodeBulletin/PingPongAI",
+        view: null,
+        download: null
+    }, {
+        title: "Zero Player Pool",
+        img1: require("../assets/png/projects/Pool.png"),
+        img2: require("../assets/png/projects/Pool.png"),
+        details: "Zero Player Pool Game that uses genetic algorithm to train the AI<br> created using: Processing",
+        code: "https://github.com/CodeBulletin/PingPongAI",
+        view: null,
+        download: null
+    }, {
+        title: "Evolution Simulator",
+        img1: require("../assets/png/projects/Evo.png"),
+        img2: require("../assets/png/projects/Evo.png"),
+        details: "Evolution Simulator that uses genetic algorithm to train the AI<br> created using: Processing",
+        code: "https://github.com/CodeBulletin/Evolutnary-Steering",
+        view: null,
+        download: null
+    }, {
+        title: "Smart Rockets",
+        img1: require("../assets/png/projects/SR.png"),
+        img2: require("../assets/png/projects/SR.png"),
+        details: "Smart Rockets that uses genetic algorithm to train the AI<br> created using: Processing",
+        code: "https://github.com/CodeBulletin/Smart_rocket",
+        view: null,
+        download: null
+    }, {
+        title: "Fractals",
+        img1: require("../assets/png/projects/Frac1.png"),
+        img2: require("../assets/png/projects/Frac2.png"),
+        details: "Fractals Visualization<br> created using: Processing",
+        code: "https://github.com/CodeBulletin/Fractals",
+        view: null,
+        download: null
+    }, {
+        title: "Circular Polarization Simulation",
+        img1: require("../assets/png/projects/CP.png"),
+        img2: require("../assets/png/projects/CP.png"),
+        details: "Circular Polarization Simulation<br> created using: Processing",
+        code: "https://github.com/CodeBulletin/Polarization",
+        view: null,
+        download: null
+    }, {
+        title: "Super Shapes 3D Visualization",
+        img1: require("../assets/png/projects/SH3D1.png"),
+        img2: require("../assets/png/projects/SH3D2.png"),
+        details: "Super Shapes 3D Visualization That allowes to Create and save the shapes<br> created using: Processing",
+        code: "https://github.com/CodeBulletin/SuperShape3D",
+        view: null,
+        download: "https://github.com/CodeBulletin/SuperShape3D/releases/download/final/SuperShape3d.tar.gz"
+    }, {
+        title: "GET MAN",
+        img1: require("../assets/png/projects/GETMAN.png"),
+        img2: require("../assets/png/projects/GETMAN.png"),
+        details: "A simple https request manager<br> created using: ReactJS, Typescript",
+        code: "https://github.com/CodeBulletin/GETMAN",
+        view: "https://codebulletin.github.io/GETMAN/",
+        download: null
+    }, {
+        title: "Book Mania",
+        img1: require("../assets/png/projects/BookMania.png"),
+        img2: require("../assets/png/projects/BookMania.png"),
+        details: "A simple book store<br> created using: PHP, MySQL, HTML, CSS, JS",
+        code: "https://github.com/CodeBulletin/Online-Book-Store",
+        view: "http://bookmaniapro.000webhostapp.com/PHP/Main/HomePage.php",
+        download: null
+    }, {
+        title: "Voice Wave",
+        img1: require("../assets/png/projects/VoiceWave.png"),
+        img2: require("../assets/png/projects/VoiceWave.png"),
+        details: "A Speech to Text Deep Learning Model <br> created using: Python, Tensorflow, FastAPI",
+        code: "https://github.com/CodeBulletin/VoiceWave",
+        view: null,
+        download: null
+    }, {
+        title: "My Portfolio",
+        img1: require("../assets/png/projects/Portfolio.png"),
+        img2: require("../assets/png/projects/Portfolio.png"),
+        details: "My Portfolio<br> created using: HTML, CSS, JS, Webpack",
+        code: "https://github.com/CodeBulletin/MyPortfolio",
+        view: "https://codebulletin.github.io/MyPortfolio/",
+        download: null
+    }, {
+        title: "My Resume",
+        img1: require("../assets/png/projects/Resume.png"),
+        img2: require("../assets/png/projects/Resume.png"),
+        details: "My Resume<br> created using: Hugo",
+        code: "https://github.com/CodeBulletin/Resume",
+        view: "https://codebulletin.github.io/Resume/",
+        download: null
     }
 ]
 
